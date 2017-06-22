@@ -1,0 +1,89 @@
+main > p {
+  background-color: black;
+  color: white;
+  /*font-size: 10px;*/
+}
+
+p {
+  color: red;
+}
+
+h2 {
+  background-color: yellow;
+}
+
+.highlight {
+  background-color: green;
+}
+
+#main-section {
+  font-size: 40px;
+}
+
+p.highlight {
+  color: purple;
+  background-color: orange;
+}
+
+a {
+  background-color: black;
+  color: white;
+}
+
+a:hover {
+  background-color: red;
+  background-color: #808080;
+}
+
+a:active {
+  background-color: blue;
+}
+
+a:visited {
+  background-color: purple;
+}
+
+li:first-child {
+  background-color: cadetblue;
+}
+
+li:last-child {
+  background-color: tomato;
+}
+
+li:nth-child(even) {
+  background-color: pink;
+}
+
+.menu li:first-child {
+  display: none;
+  /*visibility: hidden;*/
+}
+
+.menu li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.menu a {
+  font-size: 24px;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end */
