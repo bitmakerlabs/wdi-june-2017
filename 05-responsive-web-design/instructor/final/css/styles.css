@@ -1,0 +1,342 @@
+/* -------------------------------------------------- */
+/* NOTES */
+/* -------------------------------------------------- */
+/*
+- Identify colours.
+	- White: #fff;
+	- Off-black: #222;
+	- Grey: #999;
+	- Grey (dark): #555;
+	- Grey (light): #ecf0f1;
+	- Accent: #1abc9c;
+	- Accent (dark): #13af90;
+- Identify layouts.
+- Identify breakpoints.
+- Identify 'default' dimensions on layout elements.
+- Identify maximum dimensions of layout elements.
+- Build 'base' styles.
+- Build 'conditional' (eg. media query) styles.
+*/
+
+/* -------------------------------------------------- */
+/* BOILERPLATE STYLES */
+/* -------------------------------------------------- */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* -------------------------------------------------- */
+/* BASE STYLES */
+/* -------------------------------------------------- */
+html {
+	/*
+	The 'browser default' size for 1em/rem is 16px.
+	By setting the `font-size` property on <html> tag, we're able to define a 'custom rem' value.
+	*/
+	font-size: 62.5%; /* 10px / 16px = 0.625 (62.5%) */
+	font-family: 'Overpass', Helvetica, Arial, sans-serif;
+}
+
+body {
+	color: #222;
+	background-color: #ecf0f1;
+	line-height: 1.5;
+}
+
+img {
+	max-width: 100%; /* Constrain images to size of parent container. */
+}
+
+h1,
+h2 {
+	font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+}
+
+
+a,
+a:visited {
+	text-decoration: none;
+	color: #1abc9c;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #13af90;
+}
+
+button {
+	width: 94%;
+	max-width: 40rem; /* 400px / 10px = 40rem */
+	display: block;
+	color: #fff;
+	background: #1abc9c;
+	border: none;
+	margin: 4rem auto 4rem; /* 40px / 10px = 4rem */
+	padding: 2rem 1rem;
+
+	font-size: 1.6rem; /* 16px / 10px = 1.6rem */
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+button:hover,
+button:focus {
+	background: #13af90;
+}
+
+/* HEADER STYLES */
+header {
+	width: 100%;
+	height: 5rem; /* 50px / 10px = 5rem */
+	display: block;
+	background: #fff;
+	padding: 0 2rem;
+}
+
+.brand {
+	color: #1abc9c;
+	margin: 0;
+	font-size: 2rem; /* 20px / 10px = 2rem */
+	font-weight: 700;
+	line-height: 5rem; /* Setting the `line-height` equal to the height of the parent element causes the text to become vertically centred */
+	text-align: center;
+}
+
+.brand-supporting {
+	display: none;
+	color: #999;
+	font-family: 'Overpass'; /* FIXME */
+	font-size: 1.8rem; /* 18px / 10px = 1.8rem */
+	font-weight: 400;
+	line-height: 1; /* 18px / 18px = 1 */
+	vertical-align: baseline;
+}
+
+/* MAIN STYLES */
+main {
+	width: 100%;
+	max-width: 120rem; /* 1200px / 10px = 120rem */
+	display: block;
+	overflow: auto;
+}
+
+/* INTRO STYLES */
+.intro {
+	display: none;
+}
+
+/* POST STYLES */
+.post {
+	background: #fff;
+	box-shadow: 0 0.5rem 2rem rgba( 0, 0, 0, 0.15 );
+	margin-bottom: 4rem; /* 40px / 10px = 4rem */
+	float: left;
+
+	font-size: 5rem;
+}
+
+.post * {
+	margin-top: 0;
+}
+
+.post div {
+	padding: 1.5rem; /* 15px / 10px = 1.5rem */
+	padding-bottom: 2rem; /* 20px / 10px = 2rem */
+}
+
+.post img {
+	display: block;
+}
+
+.post h2 {
+	color: #1abc9c;
+	font-size: 8.75vw; /* 28px / 320px (eg. mobile screen width) = 0.0875 (8.75vw) */
+	margin-bottom: 1rem; /* 10px / 10px = 1rem */
+}
+
+.post p {
+	font-size: 4.375vw; /* 14px / 320px (eg. mobile screen width) = 0.04375 (4.375vw) */
+}
+
+.post h3 {
+	margin-bottom: 0;
+	font-size: 3.75vw; /* 12px / 32px (eg. mobile screen width) = 0.0375 (3.75vw) */
+}
+
+/* FOOTER STYLES */
+footer {
+	width: 100%;
+	height: auto;
+	display: block;
+	color: #999;
+	background: #222;
+	padding: 3rem 2rem;
+	font-size: 1.5rem; /* 15px / 10px = 1.5rem */
+}
+
+footer h3 {
+	font-size: 1.333333em; /* 20px / 15px (`font-size` of parent) = 1.333333em */
+	color: #1abc9c;
+}
+
+footer p {
+	margin: 1rem 0;
+}
+
+.info {
+	width: 94%; /* Element should never span 100% of available horizontal space. */
+	max-width: 120rem; /* 1200px / 10px = 120rem */
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.about,
+.contact,
+.sponsors {
+	margin-bottom: 3rem; /* 30px / 10px = 3rem */
+}
+
+.sponsors img {
+	margin: 0 1rem 1rem 0;
+}
+
+.legal {
+	color: #555;
+	text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES */
+/* -------------------------------------------------- */
+@media all and (min-width: 600px) {
+	header {
+		height: 6rem; /* 60px / 10px = 10rem */
+	}
+
+	.brand {
+		width: 94%; /* Element should never span 100% of available horizontal space. */
+		max-width: 120rem; /* 1200px / 10px = 120rem */
+		margin: 0 auto;
+		font-size: 2.8rem; /* 28px / 10px = 2.8rem */
+		text-align: left;
+		line-height: 6rem; /* 60px / 10px = 6rem */
+	}
+
+	.brand-supporting {
+		display: inline-block;
+	}
+
+	main {
+		width: 94%; /* Element should never span 100% of available horizontal space. */
+		margin: 0 auto;
+		padding: 4rem 2rem;
+	}
+
+	.post {
+		font-size: 1.4rem /* 14px / 10px = 1.4rem */
+	}
+
+	.post h2 {
+		font-size: 2em; /* 28px / 14px (`font-size` of parent) = 2em */
+	}
+
+	.post p {
+		font-size: 1em; /* 14px / 14px (`font-size` of parent) = 1em */
+	}
+
+	.post h3 {
+		font-size: 0.875em; /* 12px / 14px (`font-size` of parent) = 0.875em  */
+	}
+}
+
+@media all and (min-width: 600px) and (max-width: 959px) {
+	.post {
+		width: 48%;
+		margin-bottom: 4%;
+	}
+
+	.post:nth-child( 2n ) {
+		margin-left: 4%;
+	}
+}
+
+@media all and (min-width: 960px) {
+	.intro {
+		width: 66%; /* TODO */
+		display: block;
+		margin: 0;
+		margin-bottom: 4rem; /* 40px / 10px = 4rem */
+		padding: 0;
+		text-align: left;
+	}
+
+	.intro h2,
+	.intro h3 {
+		margin: 0 0 2rem;
+	}
+
+	.intro h2 {
+		color: #1abc9c;
+		display: inline-block;
+		margin-bottom: 3rem; /* 30px / 10px = 3rem */
+		padding-bottom: 1rem; /* 10px / 10px = 1rem */
+		border-bottom: 0.5rem #1abc9c solid;
+		font-size: 6rem; /* 60px / 10px = 6rem */
+		line-height: 1.2; /* 72px / 60px (`font-size` of element) = 1.2 */
+	}
+
+	.intro h3 {
+		font-size: 2.2rem; /* 22px / 10px = 2.2rem */
+		font-weight: 500;
+	}
+
+	.post {
+		width: 32%; /* 32% x 3 = 96% */
+		margin-bottom: 2%;
+	}
+
+	.post:nth-child( 3n ) {
+		margin-left: 2%;
+	}
+
+	.post:nth-child( 3n - 1 ) {
+		margin-left: 2%;
+	}
+
+	.about,
+	.contact,
+	.sponsors {
+		width: 32%;
+		margin-right: 2%;
+		margin-bottom: 0;
+		float: left;
+	}
+
+	.sponsors {
+		margin-right: 0;
+	}
+
+	.legal {
+		margin-top: 3rem;
+		clear: left;
+	}
+
+	button {
+		width: 32%;
+	}
+}
