@@ -1,0 +1,44 @@
+/* -------------------------------------------------- */
+/* NOTES */
+/* -------------------------------------------------- */
+/*
+- Identify colours.
+	- ??????: ??????
+- Identify layouts.
+- Identify breakpoints.
+- Identify 'default' dimensions on layout elements.
+- Identify maximum dimensions of layout elements.
+- Build 'base' styles.
+- Build 'conditional' (eg. media query) styles.
+*/
+
+/* -------------------------------------------------- */
+/* BOILERPLATE STYLES */
+/* -------------------------------------------------- */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* -------------------------------------------------- */
+/* BASE STYLES */
+/* -------------------------------------------------- */
+/*
+HINTS:
+- Write generic styles first, move on to more specific styles.
+- Group related styles (eg. 'type styles', 'header styles', etc.)
+*/
