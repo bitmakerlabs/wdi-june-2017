@@ -1,8 +1,8 @@
 # Programming fundamentals: basic data types, variables, flow control
 
-Ruby is the primary programming language we'll be learning in this course. Ruby was created by Yukihiro Matsumoto aka Matz in 1995.
+There are many programming languages, each well-suited to solving particular types of problems and most of the programming languages you'll encounter throughout your career adhere to the same underlying concepts. Understanding these basic building blocks will allow you to pick up new languages quickly, which will lead to being able to choose the right tool for any job.
 
-Matz set out to design a language that emphasized human needs over those of the computer, which is why Ruby is so easy to pick up. Not only is it easy to learn, but has also become very popular for building web applications, thanks to Rails.
+Today we'll cover some of the most fundamental programming concepts that are the foundational elements to solving any problems with computation.
 
 ## Agenda
 After this lesson, you will know:
@@ -24,6 +24,11 @@ After this lesson, you will know:
     * Simple iterators
 
 ## What is Ruby?
+
+Ruby is the primary programming language we'll be learning in this course. Ruby was created by Yukihiro Matsumoto aka Matz in 1995.
+
+Matz set out to design a language that emphasized human needs over those of the computer, which is why Ruby is so easy to pick up. Not only is it easy to learn, but has also become very popular for building web applications, thanks to Rails.
+
   * High-level
   * Written in C
   * Interpreted (vs. compiled)
