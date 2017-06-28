@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>README</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/*
+ Solarized Color Schemes originally by Ethan Schoonover
+ http://ethanschoonover.com/solarized
+
+ Ported for PrismJS by Hector Matos
+ Website: https://krakendev.io
+ Twitter Handle: https://twitter.com/allonsykraken)
+*/
+
+/*
+SOLARIZED HEX
+--------- -------
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #657b83; /* base00 */
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	background: #073642; /* base02 */
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	background: #073642; /* base02 */
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background-color: #fdf6e3; /* base3 */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #93a1a1; /* base1 */
+}
+
+.token.punctuation {
+	color: #586e75; /* base01 */
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #268bd2; /* blue */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+	color: #2aa198; /* cyan */
+}
+
+.token.entity {
+	color: #657b83; /* base00 */
+	background: #eee8d5; /* base2 */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #859900; /* green */
+}
+
+.token.function {
+	color: #b58900; /* yellow */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #cb4b16; /* orange */
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Programming Fundamentals:<br>Collections and Iteration</h1>
+
+<hr>
+
+<h1 id="toc_1">Agenda</h1>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Introduction</td>
+<td style="text-align: right"><small> 5 min</small></td>
+</tr>
+<tr>
+<td>Arrays</td>
+<td style="text-align: right"><small>30 min</small></td>
+</tr>
+<tr>
+<td>Hashes</td>
+<td style="text-align: right"><small>20 min</small></td>
+</tr>
+<tr>
+<td>Hashes vs. Arrays</td>
+<td style="text-align: right"><small>10 min</small></td>
+</tr>
+<tr>
+<td>Iteration</td>
+<td style="text-align: right"><small>40 min</small></td>
+</tr>
+<tr>
+<td>Further Resources and Wrap Up</td>
+<td style="text-align: right"><small> 5 min</small></td>
+</tr>
+</tbody>
+</table>
+
+<p><br></p>
+
+<hr>
+
+<h1 id="toc_2">Introduction</h1>
+
+<p>In Ruby, iteration is the act of going through a collection.</p>
+
+<p><code>Arrays</code> and <code>Hashes</code> are the two most common Ruby classes for holding collections (i.e. more than one object).</p>
+
+<p>As you code, keep in mind whether you are working with a single item, or a collection of items.</p>
+
+<p><br></p>
+
+<hr>
+
+<h1 id="toc_3">Arrays</h1>
+
+<h2 id="toc_4">Definition</h2>
+
+<blockquote>
+<p>Arrays are ordered, integer-indexed collections of any object.</p>
+</blockquote>
+
+<h2 id="toc_5">Documentation</h2>
+
+<p><a href="https://ruby-doc.org/core-2.4.1/Array.html">https://ruby-doc.org/core-2.4.1/Array.html</a></p>
+
+<ul>
+<li>you can see where I got the definition from!</li>
+</ul>
+
+<p>Here you&#39;ll find a list of useful array methods and how to use them.</p>
+
+<h2 id="toc_6">Enumerable</h2>
+
+<p>Notice on the left hand side of the Array documentation, there&#39;s a subtle <strong>Included Modules</strong> section which lists:
+<strong>Enumerable</strong></p>
+
+<p>This means that the <code>Enumerable</code> functionality has been <strong><em>&quot;Mixed In&quot;</em></strong> (aka included) in the <code>Array</code> class.</p>
+
+<p>In computer science,  <strong><em>Enumerable</em></strong> means &quot;able to be counted&quot;. The reason it&#39;s a separate module is because other types of collections also include <code>Enumerable</code>. Like, for example, the <code>Hash</code> data type. It makes sense to keep our code DRY (Don&#39;t - Repeat - Yourself), and therefore they&#39;ve separated like-functionality into a separate module that can be used over and over again in different collection types.</p>
+
+<p>When looking up documentation on arrays, you&#39;ll want to look at both the Array documention and the Enumerable documentation:</p>
+
+<p>https://ruby-doc.org/core-2.4.1/Array.html
+https://ruby-doc.org/core-2.4.1/Enumerable.html</p>
+
+<h2 id="toc_7">Creating An Array</h2>
+
+<p>Use square brackets <code>[]</code> to create an array.</p>
+
+<p>For example, here we create an empty array and store it in a new variable <code>my_array</code>.</p>
+
+<div><pre><code class="language-ruby">my_array = []</code></pre></div>
+
+<p>You can include values as you create an array too:</p>
+
+<div><pre><code class="language-ruby">breakfast = [&#39;pancakes&#39;, &#39;bacon&#39;, &#39;eggs&#39;]</code></pre></div>
+
+<h2 id="toc_8">Adding To An Array</h2>
+
+<p>Use the Ruby <strong><em>&#39;shovel operator&#39;</em></strong> <code>&lt;&lt;</code> to <strong><em>push</em></strong> (<em>add</em>) an object onto an array:</p>
+
+<div><pre><code class="language-ruby">my_array &lt;&lt; &#39;Ray&#39;
+my_array &lt;&lt; &#39;Egon&#39;
+my_array &lt;&lt; &#39;Peter&#39;
+my_array &lt;&lt; &#39;Winston&#39;</code></pre></div>
+
+<p>When an item is added to the array, it&#39;s assigned an <strong><em>index</em></strong>.  An index is an <code>Integer</code> pointing to the value in the array. The index begins at <code>0</code>, and goes up by one for each item added. New items <em>pushed</em> onto the array are added to the end of the array.</p>
+
+<h2 id="toc_9">Removing From An Array</h2>
+
+<h3 id="toc_10"><code>.pop</code></h3>
+
+<p>To remove the last item from an array, use <code>pop</code>.</p>
+
+<div><pre><code class="language-ruby">irb &gt; my_array &lt;&lt; &#39;Ray&#39;
+irb &gt; my_array &lt;&lt; &#39;Egon&#39;
+irb &gt; my_array &lt;&lt; &#39;Peter&#39;
+irb &gt; my_array &lt;&lt; &#39;Winston&#39;
+irb &gt; my_array &lt;&lt; &#39;Dana&#39;
+irb &gt; my_array
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;, &quot;Dana&quot;]
+irb &gt; my_array.pop
+=&gt; &quot;Dana&quot;
+irb &gt; my_array
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;]</code></pre></div>
+
+<p><code>push</code>: adds an item to the end of the array
+<code>pop</code>: removes the last item of the array</p>
+
+<p>Ruby arrays follow the computer science convention <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">LIFO</a> (last in, first out).</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png" alt=""></p>
+
+<h3 id="toc_11"><code>.delete</code></h3>
+
+<p>There are many ways to remove items from arrays. If you know the object you want to remove from your array, you can use <code>delete</code>:</p>
+
+<div><pre><code class="language-ruby">irb &gt; my_array = [&#39;Ray&#39;, &#39;Egon&#39;, &#39;Peter&#39;, &#39;Winston&#39;]
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Winston&quot;, &quot;Peter&quot;]
+irb &gt; my_array.delete(&#39;Winston&#39;)
+=&gt; &quot;Winston&quot;
+irb &gt; my_array
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;]</code></pre></div>
+
+<h3 id="toc_12"><code>.delete_at</code></h3>
+
+<p>You can use <code>delete_at</code> if you know the index:</p>
+
+<div><pre><code class="language-ruby">irb &gt; my_array = [&#39;Ray&#39;, &#39;Egon&#39;, &#39;Peter&#39;, &#39;Winston&#39;]
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Winston&quot;, &quot;Peter&quot;]
+irb &gt; my_array.delete_at(2)
+=&gt; &quot;Winston&quot;
+irb &gt; my_array
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;]</code></pre></div>
+
+<h3 id="toc_13"><code>.shift</code></h3>
+
+<p>And if it&#39;s the first item that needs to be removed, then use <code>shift</code>:</p>
+
+<div><pre><code class="language-ruby">irb &gt; my_array = [&#39;Ray&#39;, &#39;Egon&#39;, &#39;Peter&#39;, &#39;Winston&#39;]
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;]
+irb &gt; my_array.shift
+=&gt; &quot;Ray&quot;
+irb &gt; my_array
+=&gt; [&quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;]</code></pre></div>
+
+<h3 id="toc_14">Index of values can change</h3>
+
+<p>When you remove a value from an array, the index of all the items after the removed item decreases by one.</p>
+
+<div><pre><code class="language-ruby">irb &gt; foods = [&#39;Potato Bread&#39;, &#39;French Fries&#39;, &#39;Potato Eyes&#39;, &#39;Potato Pizza&#39;, &#39;Mashed Potatoes&#39;]
+
+# index:  0               1             2                3                4
+=&gt; [&quot;Potato Bread&quot;, &quot;French Fries&quot;, &quot;Potato Eyes&quot;, &quot;Potato Pizza&quot;, &quot;Mashed Potatoes&quot;]
+
+irb &gt; eat = foods.delete_at(2)
+=&gt; &quot;Potato Eyes&quot;
+
+irb &gt; foods
+
+# index:  0               1             2                3
+=&gt; [&quot;Potato Bread&quot;, &quot;French Fries&quot;, &quot;Potato Pizza&quot;, &quot;Mashed Potatoes&quot;]</code></pre></div>
+
+<h2 id="toc_15">irb Tangent</h2>
+
+<p>irb reports back the return value of your last command. It denotes this using a <strong><em>hash rocket</em></strong>, the <code>=&gt;</code> sign. Thus if you type <code>my_array</code> (the name of your variable), irb will show you the contents of that variable:</p>
+
+<div><pre><code class="language-ruby">irb &gt; my_array
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;]</code></pre></div>
+
+<p><code>puts</code> is a built-in Ruby method for outputing to he screen. When <code>puts</code> receives an array, it splits the array onto separate lines and outputs each line:</p>
+
+<div><pre><code class="language-ruby">irb &gt; puts my_array
+Ray
+Egon
+Peter
+Winston
+=&gt; nil</code></pre></div>
+
+<p>Notice that the return value of <code>puts</code> is <code>nil</code>. Even though it displays output to the screen, <code>puts</code> always returns <code>nil</code>.</p>
+
+<p>And now back to our regularly scheduled lesson ...</p>
+
+<h2 id="toc_16">Accessing Values</h2>
+
+<p>Array values can be accessed using their <strong><em>index</em></strong>.</p>
+
+<p>The first value in the array is accessed with the <code>Integer</code> <code>0</code>.
+The next value is accessed with the <code>Integer</code> <code>1</code>.
+The next value is accessed with the <code>Integer</code> <code>2</code>.
+The next value is accessed with the <code>Integer</code> <code>3</code>.
+and so on ...</p>
+
+<p>To access a value, type the variable name your array is stored in, and then put square brackets <code>[]</code> directly beside the local variable name with the index you&#39;d like to access.</p>
+
+<p>For example:</p>
+
+<div><pre><code class="language-ruby">my_array[0] # returns &quot;Ray&quot;
+my_array[2] # returns &quot;Peter&quot;</code></pre></div>
+
+<p>We can display the contents of an array with <code>puts</code>:</p>
+
+<div><pre><code class="language-ruby">puts my_array</code></pre></div>
+
+<p><code>puts</code> displays each item in the array on a separate line.</p>
+
+<p>We can access items starting from the end of the array and work backwards by using a negative index:</p>
+
+<div><pre><code class="language-ruby">my_array = [&#39;Ray&#39;, &#39;Egon&#39;, &#39;Peter&#39;, &#39;Winston&#39;]
+my_array[-1] # accesses &#39;Winston&#39;, the last item
+my_array[-2] # accesses &#39;Peter&#39;, the second last item</code></pre></div>
+
+<p>We can access a range of items from an array:</p>
+
+<div><pre><code class="language-ruby">countries = [
+  &#39;Afghanistan&#39;, &#39;Bangladesh&#39;, &#39;Canada&#39;,  &#39;Denmark&#39;, &#39;Egypt&#39;, 
+  &#39;Finland&#39;,     &#39;Guatemala&#39;,  &#39;Hungary&#39;, &#39;India&#39;,   &#39;Japan&#39;, 
+  &#39;Kenya&#39;,       &#39;Laos&#39;,       &#39;Mexico&#39;,  &#39;Norway&#39;,  &#39;Oman&#39;
+]
+
+countries[4..7] # returns [&quot;Egypt&quot;, &quot;Finland&quot;, &quot;Guatemala&quot;, &quot;Hungary&quot;]</code></pre></div>
+
+<h2 id="toc_17">Modifying Values</h2>
+
+<p>Change the value of an array by accessing its index and using the <code>=</code> assignment operator:</p>
+
+<div><pre><code class="language-ruby">irb &gt; words = [&#39;The&#39;, &#39;quick&#39;, &#39;brown&#39;, &#39;fox&#39;]
+=&gt; [&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;]
+irb &gt; words[2] = &#39;purple&#39;
+=&gt; &quot;purple&quot;
+irb &gt; words
+=&gt; [&quot;The&quot;, &quot;quick&quot;, &quot;purple&quot;, &quot;fox&quot;]</code></pre></div>
+
+<p>When we add an item to an array, the return value is the array with the item added:</p>
+
+<div><pre><code class="language-ruby">irb &gt; my_array
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;]
+irb &gt; my_array &lt;&lt; &#39;Dana&#39;
+=&gt; [&quot;Ray&quot;, &quot;Egon&quot;, &quot;Peter&quot;, &quot;Winston&quot;, &quot;Dana&quot;]</code></pre></div>
+
+<h2 id="toc_18">Any Object</h2>
+
+<p>Remember our array definition:</p>
+
+<blockquote>
+<p>Arrays are ordered, integer-indexed collections of <strong><em>any object</em></strong>.</p>
+</blockquote>
+
+<p>That means we can store <em>any object</em> in Ruby in an array.</p>
+
+<div><pre><code class="language-ruby">nums = [1, 2, 3]
+prices = [2.99, 3.88, 4.77]
+words = [&#39;shoe&#39;, &#39;banana&#39;, &#39;the pope&#39;]</code></pre></div>
+
+<p>We can even mix object types:</p>
+
+<div><pre><code class="language-ruby">random_stuff = [2, &#39;the pope&#39;, :my_symbol]
+
+=&gt; [2, &quot;the pope&quot;, :my_symbol]</code></pre></div>
+
+<p>Even though it&#39;s possible to add objects of different types in an array, it&#39;s more common to store objects of the same type in an array.</p>
+
+<h2 id="toc_19">Nested Arrays</h2>
+
+<p>We can store arrays inside of arrays:</p>
+
+<div><pre><code class="language-ruby">nums = [1, 2, 3]
+prices = [2.99, 3.88, 4.77]
+words = [&#39;shoe&#39;, &#39;banana&#39;, &#39;the pope&#39;]
+my_arrays = [nums, prices, words]
+=&gt; [[1, 2, 3], [2.99, 3.88, 4.77], [&quot;shoe&quot;, &quot;banana&quot;, &quot;the pope&quot;]]</code></pre></div>
+
+<p>Notice the square brackets on the outside of <code>my_arrays</code>. This denotes that my_arrays is an array. And then notice the square brackets around each array inside the greater array. This is called a <strong><em>nested array</em></strong>.</p>
+
+<h2 id="toc_20">Class Exercise: Array Party Exchange</h2>
+
+<h3 id="toc_21">Step #1: Create Your Array Of Items</h3>
+
+<p>Create an array of things you like. Include at least five items. For example, if you like ice cream, you could create the following array:</p>
+
+<div><pre><code class="language-ruby">flavours = [&#39;Chocolate&#39;, &#39;Strawberry&#39;, &#39;Vanilla&#39;, &#39;Rocky Road&#39;, &#39;Green Tea&#39;]</code></pre></div>
+
+<h3 id="toc_22">Step #2: Exchange Items With Classmate</h3>
+
+<p>Find a classmate and exchange items in your arrays.</p>
+
+<p>When you give your classmate an item, ensure you remove that item from your array, and add the item your classmate is giving to you. Use the shovel operator <code>&lt;&lt;</code> to add your new item and either <code>pop</code>, <code>shift</code>, <code>delete</code>, or <code>delete_at</code> to remove an item.</p>
+
+<p>Exchange a few times so that you end up with an array that&#39;s quite different from your original array.</p>
+
+<h3 id="toc_23">Step #4: Change The Value Of An Item</h3>
+
+<p>Change the value of one of your items to something else by using an equals <code>=</code> assignment operator.</p>
+
+<h3 id="toc_24">Step #5: Do Things With Your Array</h3>
+
+<p>Once you have items in an array, there&#39;s tons of functionality available. Try these out:</p>
+
+<div><pre><code class="language-ruby">your_array.sort
+your_array.reverse
+your_array.join(&#39;, &#39;)
+your_array.sample # try this one a few times
+
+# try these: is there a difference?
+your_array.size
+your_array.count
+your_array.length</code></pre></div>
+
+<p>Look at the <a href="https://ruby-doc.org/core-2.4.1/Array.html">array documentation</a> and experiment with some of the other methods.</p>
+
+<h2 id="toc_25"><br></h2>
+
+<h1 id="toc_26">Hashes</h1>
+
+<h2 id="toc_27">Definition</h2>
+
+<blockquote>
+<p>A Hash is a collection of unique keys and their values.</p>
+</blockquote>
+
+<h2 id="toc_28">Documentation</h2>
+
+<p><a href="https://ruby-doc.org/core-2.4.1/Hash.html">https://ruby-doc.org/core-2.4.1/Hash.html</a></p>
+
+<p>Notice that Hashes include <code>Enumerable</code>, so you&#39;ll need to consult that <a href="https://ruby-doc.org/core-2.4.1/Enumerable.html">documentation</a> too.</p>
+
+<h2 id="toc_29">Creating Hashes</h2>
+
+<p>Use curly braces <code>{}</code> to create hash.</p>
+
+<p>For example, here we create an empty hash and store it in a new local variable <code>my_hash</code>.</p>
+
+<div><pre><code class="language-ruby">my_hash = {}</code></pre></div>
+
+<p>Here&#39;s how to create a hash with values:</p>
+
+<div><pre><code class="language-ruby">bobby = { :nose =&gt; &#39;big&#39;, :eyes =&gt; &#39;brown&#39;, :age =&gt; 21 }</code></pre></div>
+
+<p>The <code>=&gt;</code> is called a <strong><em>hash rocket</em></strong> as it&#39;s commonly used for create hashes and looks like a rocket.</p>
+
+<p>Each item in a hash must have both a <code>key</code> and a <code>value</code>. In the example above:</p>
+
+<p><code>:nose</code> is the key, <code>&#39;big&#39;</code> is the value
+<code>:eyes</code> is the key, <code>&#39;brown&#39;</code> is the value
+<code>:age</code> is the key, <code>21</code> is the value.</p>
+
+<p>Newer versions of Ruby support a more elegant syntax for creating hashes:</p>
+
+<div><pre><code class="language-ruby">bobby = { nose: &#39;big&#39;, eyes: &#39;brown&#39;, age: 21 }</code></pre></div>
+
+<p>This example is identical to the first example. Even though the <code>nose</code> symbol is created with a <code>:</code> on the right side instead of the left side. When you read it back in irb, <code>nose</code> will be a symbol with the <code>:</code> on the left sie:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bobby = { nose: &#39;big&#39;, eyes: &#39;brown&#39;, age: 21 }
+=&gt; {:nose=&gt;&quot;big&quot;, :eyes=&gt;&quot;brown&quot;, :age=&gt;21}</code></pre></div>
+
+<p>The newer <code>:</code> on the right side makes creating a hash in Ruby very similar to creating an object in JavaScript. In JavaScript, <strong><em>objects</em></strong> are similar to <strong><em>hashes</em></strong> in Ruby.</p>
+
+<p>Symbols are often used as keys for a hash, but any Ruby object can be a key. For example, here&#39;s a similar method assignment using strings instead of symbols:</p>
+
+<div><pre><code class="language-ruby">bobby = { &#39;nose&#39; =&gt; &#39;big&#39;, &#39;eyes&#39; =&gt; &#39;brown&#39;, &#39;age&#39; =&gt; 21 }</code></pre></div>
+
+<p>See how I used hash rockets for the assignments in the above example: if you aren&#39;t using symbols as keys, hash rockets must be used. If you are using symbols as keys, the best practice is to use a right-sided <code>:</code> for assignment.</p>
+
+<h2 id="toc_30">Adding To A Hash</h2>
+
+<p>To add a new key / value pair to an existing hash, access the hash using the variable name, and use <code>[]</code> along with an <code>=</code> to assign the value to the key:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bobby = { nose: &#39;big&#39;, eyes: &#39;brown&#39;, age: 21 }
+irb &gt; bobby[:hair] = &#39;nonexistent&#39;</code></pre></div>
+
+<h2 id="toc_31">Accessing Values</h2>
+
+<p>To obtain the value of a key, use <code>[]</code>:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bobby = { nose: &#39;big&#39;, eyes: &#39;brown&#39;, age: 21 }
+irb &gt; bobby[:eyes]
+=&gt; &quot;brown&quot;</code></pre></div>
+
+<p>If you create your hash with strings instead of symbols, you&#39;ll need to access the values using the strings:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bobby = { &#39;nose&#39; =&gt; &#39;big&#39;, &#39;eyes&#39; =&gt; &#39;brown&#39;, &#39;age&#39; =&gt; 21 }
+=&gt; {&quot;nose&quot;=&gt;&quot;big&quot;, &quot;eyes&quot;=&gt;&quot;brown&quot;, &quot;age&quot;=&gt;21}
+irb &gt; bobby[&#39;nose&#39;]
+=&gt; &quot;big&quot;
+irb &gt; bobby[:nose]
+=&gt; nil</code></pre></div>
+
+<p>There is no <code>:nose</code> key in the above hash, so irb reports back <code>nil</code> as the value.</p>
+
+<h2 id="toc_32">Modifying Values</h2>
+
+<p>Values can be overwritten using the same syntax as adding a new key / value pair:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bobby = { nose: &#39;big&#39;, eyes: &#39;brown&#39;, age: 21, hair: &#39;nonexistent&#39; }
+=&gt; {:nose=&gt;&quot;big&quot;, :eyes=&gt;&quot;brown&quot;, :age=&gt;21, :hair=&gt;&quot;nonexistent&quot;}
+
+irb &gt; bobby[:hair] = &#39;long, brown mane&#39;
+=&gt; &quot;long, brown mane&quot;
+
+irb &gt; bobby
+=&gt; {:nose=&gt;&quot;big&quot;, :eyes=&gt;&quot;brown&quot;, :age=&gt;21, :hair=&gt;&quot;long, brown mane&quot;}</code></pre></div>
+
+<h2 id="toc_33">Removing Values</h2>
+
+<p>You can set a value to <code>nil</code>, which in Ruby is a valid value that means <strong>nothing</strong>.</p>
+
+<div><pre><code class="language-ruby">bobby[:hair] = nil</code></pre></div>
+
+<p>But you&#39;ll still have the key / value pair in your hash:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bobby
+=&gt; {:nose=&gt;&quot;big&quot;, :eyes=&gt;&quot;brown&quot;, :age=&gt;21, :hair=&gt;nil}</code></pre></div>
+
+<p>To remove the key / value from the hash, use <code>delete</code>:</p>
+
+<div><pre><code class="language-ruby">bobby.delete(:hair)</code></pre></div>
+
+<h2 id="toc_34">Nested Hashes</h2>
+
+<p>It&#39;s common to nest hashes within hashes:</p>
+
+<div><pre><code class="language-ruby">bobby =  { name: &#39;Bobby&#39;,  role: &#39;Instructor&#39;, features: { hair: &#39;wonderful&#39;, eyes: &#39;brown&#39;, age: 21, nose: &#39;big&#39;     } }
+sasha = { name: &#39;Sasha&#39;, role: &#39;Instructor&#39;, features: { hair: &#39;curly&#39;,     eyes: &#39;brown&#39;, age: 15, nose: &#39;nice&#39;    } }
+alice = { name: &#39;Alice&#39;, role: &#39;Student&#39;,    features: { hair: &#39;red&#39;,       eyes: &#39;blue&#39;,  age: 71, nose: &#39;massive&#39; } }
+bob =   { name: &#39;Bob&#39;,   role: &#39;Student&#39;,    features: { hair: &#39;blonde&#39;,    eyes: &#39;green&#39;, age: 11, nose: &#39;lovely&#39;  } }
+
+puts &quot;#{alice[:name]} is the student and she has #{alice[:features][:hair]} hair.&quot;</code></pre></div>
+
+<p>Notice we needed to access to Alice&#39;s hair colour by using two sets of square brackets: <code>alice[:features][:hair]</code>.</p>
+
+<p><code>alice[:features]</code> returns the nested hash: <code>{ hair: &#39;red&#39;,       eyes: &#39;blue&#39;,  age: 71, nose: &#39;massive&#39; }</code></p>
+
+<p>We then take that returned hash and add <code>[:hair]</code> to access he value under that key in the returned hash:</p>
+
+<p><code>alice[:features][:hair]</code> which ultimately returns <code>&quot;red&quot;</code>.</p>
+
+<p><br></p>
+
+<hr>
+
+<h1 id="toc_35">Hashes vs. Arrays</h1>
+
+<h2 id="toc_36">Array Use Case</h2>
+
+<p>Arrays are used when you have like objects.</p>
+
+<h2 id="toc_37">Hash Use Case</h2>
+
+<p>Hashes are used when you have values you want to associate to the same object.</p>
+
+<h2 id="toc_38">When to choose one or the other?</h2>
+
+<p>Both are used extensively with each other. You&#39;ve already been exposed to these data structures in week 1: HTML and CSS.</p>
+
+<p>For example, let&#39;s say we had this html document:</p>
+
+<div><pre><code class="language-markup">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Kitty Catty Ipsum&lt;/title&gt;
+  &lt;style type=&#39;text/css&#39;&gt;
+
+    body {
+      background: yellow;
+    }
+
+    h1 {
+      color: tomato;
+      font: 25px;
+    }
+
+    .inverted {
+      color: white;
+      background: black;
+    }
+
+    .normal {
+      color: black;
+      background: white;
+    }
+
+    .big {
+      font: 20px;
+    }
+
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Cat Ipsum&lt;/h1&gt;
+  &lt;p id=&#39;leading&#39; class=&#39;inverted big&#39;&gt;
+    Hide head under blanket so no one can see. Proudly present butt to human. Then cats take over the world kitty loves pigs.
+  &lt;p&gt;
+  &lt;p id=&#39;main&#39; class=&#39;normal&#39;&gt;
+    Rub face on everything. Bleghbleghvomit my furball really tie the room together. Hunt anything that moves rub whiskers on bare skin act innocent meow to be let out and sleep on keyboard eat from dog&#39;s food. Give me attention or face the wrath of my claws refuse to drink water except out of someone&#39;s glass, or then cats take over the world, and sit in box sleep on keyboard.
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+
+<p>You can imagine a web browser parsing it like so when it&#39;s trying to figure out how to display the document on your screen:</p>
+
+<div><pre><code class="language-ruby">styles = [
+  &#39;body&#39;      =&gt; { background: &#39;yellow&#39; },
+  &#39;h1&#39;        =&gt; { color: &#39;tomato&#39;, font: &#39;25px&#39; },
+  &#39;.inverted&#39; =&gt; { color: &#39;white&#39;, background: &#39;black&#39; },
+  &#39;.normal&#39;   =&gt; { color: &#39;black&#39;, background: &#39;white&#39; },
+  &#39;.big&#39;      =&gt; { font: &#39;20px&#39; }
+]
+
+page = [
+  html: { parent: :root },
+  head: { parent: :html },
+  title: { parent: :head, content: &#39;Kitty Catty Ipsum&#39; },
+  body: [
+    { h1: { content: &#39;Cat Ipsum&#39; } },
+    { p: { content: &#39;Hide head under blanket so no one can see. Proudly present butt to human. Then cats take over the world kitty loves pigs.&#39;,
+           attributes: [id: &#39;leading&#39;, class: [&#39;inverted&#39;, &#39;big&#39;]] } }
+  ]
+]</code></pre></div>
+
+<p>You can see in the above example we need to use both hashes and arrays together.</p>
+
+<p><br></p>
+
+<hr>
+
+<h1 id="toc_39">Iteration</h1>
+
+<hr>
+
+<h2 id="toc_40">Simple Iteration</h2>
+
+<p>The simplest way of going through a collection in Ruby is by calling <code>times</code> and a number.</p>
+
+<p>For example:</p>
+
+<div><pre><code class="language-ruby">5.times do 
+  puts &quot;Hello, Bitmaker!&quot;
+end</code></pre></div>
+
+<p>We can store a local variable in each iteration of the number by setting up the variable in <strong><em>pipes</em></strong>.</p>
+
+<p>For example:</p>
+
+<div><pre><code class="language-ruby">5.times do |my_number|
+  puts &quot;#{my_number} cheers for Bitmaker!&quot;
+end</code></pre></div>
+
+<p><br></p>
+
+<h2 id="toc_41">Iterating Through Arrays</h2>
+
+<h3 id="toc_42"><code>.each</code></h3>
+
+<p><code>.each</code> is the most common way to iterate through a collection. It executes a code block once for each item in the array.</p>
+
+<p>Here is the syntax with an example:</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]
+
+bears.each do |bear|
+  puts &quot;#{bear} Bear battles Professor Coldheart&quot;
+end
+
+puts &#39;Professor Coldheart flees to the Land Without Feelings.&#39;</code></pre></div>
+
+<p>It will output:</p>
+
+<div><pre><code class="language-none">Cheer Bear battles Professor Coldheart
+Funshine Bear battles Professor Coldheart
+Love-a-lot Bear battles Professor Coldheart
+Grumpy Bear battles Professor Coldheart
+Professor Coldheart flees to the Land Without Feelings.</code></pre></div>
+
+<p>By default, Ruby code is executed from top to bottom, unless a flow control mechanism is introduced. In our case, we have introduced a loop, so the first line is executed, then the loop is executed four times (once for <code>each</code> item in the array), and then the final line is executed.</p>
+
+<p>Let&#39;s take apart the example:</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]</code></pre></div>
+
+<p>Here we setup a local variable called <code>bears</code>. In this variable we store an array that contains 4 strings: <em>Cheer</em>, <em>Funshine</em>, <em>Love-a-lot</em> and <em>Grumpy</em>. Notice that our variable name <code>bears</code> has an <code>s</code> on the end of it. It&#39;s common to pluralize collections, and when you move onto rails, pluralization has significant meaning.</p>
+
+<div><pre><code class="language-ruby">bears.each do |bear|</code></pre></div>
+
+<p>This is the setup for our loop. We are calling the <code>each</code> method on <code>bears</code> and we are passing in a code block as our argument.</p>
+
+<p>We have also setup <code>bear</code> as a local variable that will only have scope within the code block. Notice <code>bear</code> is singular, as it will represent a single <code>bear</code> each time the code block is executed.</p>
+
+<p>The local variable <code>bear</code> could have been any valid ruby local variable name, but it&#39;s important to choose meaningful names for variables, so we chose bear.</p>
+
+<p>For example, we could have chosen <code>x</code> as the local variable name:</p>
+
+<div><pre><code class="language-ruby">bears.each do |x|
+  puts &quot;#{x} Bear battles Professor Coldheart&quot;
+end</code></pre></div>
+
+<p>The above example would be processed exactly like our original code block, but is more difficult to understand as <code>x</code> has less meaning.</p>
+
+<p>One of the most important goals in programming is make your code <strong><em>easy to reason about</em></strong>. Once you start developing bigger programs, it can be difficult to follow code that doesn&#39;t use thoughtful variable names. Let&#39;s put <code>bear</code> back in as our block scoped variable name:</p>
+
+<div><pre><code class="language-ruby">bears.each do |bear|
+  puts &quot;#{bear} Bear battles Professor Coldheart&quot;
+end</code></pre></div>
+
+<p>Between the <code>do</code> and the <code>end</code> is the code block. It will be executed once for <em>each</em> item in the array.</p>
+
+<p>It begins at the <code>do</code>, sets up the current array item in the local variable <code>bear</code>, and then when it reaches the word <code>end</code>, it goes back to the word <code>do</code>. It continues this process until it&#39;s iterated through every item in the array.</p>
+
+<div><pre><code class="language-ruby">  puts &quot;#{bear} Bear battles Professor Coldheart&quot;</code></pre></div>
+
+<p>This line is the inside of the code block. The first time it&#39;s executed, the local variable <code>bear</code> will equal &#39;Cheer&#39; and it will output:</p>
+
+<div><pre><code class="language-none">Cheer Bear battles Professor Coldheart</code></pre></div>
+
+<p>The second time it&#39;s executed, <code>bear</code> will equal <code>Funshine</code> and it will output:</p>
+
+<div><pre><code class="language-none">Funshine Bear battles Professor Coldheart</code></pre></div>
+
+<p>The third time it&#39;s executed, <code>bear</code> will equal <code>Love-a-lot</code> and it will output:</p>
+
+<div><pre><code class="language-none">Love-a-lot Bear battles Professor Coldheart</code></pre></div>
+
+<p>The fourth time it&#39;s executed, <code>bear</code> will equal <code>Grumpy</code> and it will output:</p>
+
+<div><pre><code class="language-none">Grumpy Bear battles Professor Coldheart</code></pre></div>
+
+<p>Let&#39;s take one more look at this loop:</p>
+
+<div><pre><code class="language-ruby">bears.each do |bear|
+  puts &quot;#{bear} Bear battles Professor Coldheart&quot;
+end</code></pre></div>
+
+<p>After it&#39;s finished processing the loop, the local variable <code>bear</code> disappears and is no longer set. It only held a value in the <code>do...end</code> code block. If we added the line <code>puts bear</code> after the loop:</p>
+
+<div><pre><code class="language-ruby">bears.each do |bear|
+  puts &quot;#{bear} Bear battles Professor Coldheart&quot;
+end
+
+puts bear</code></pre></div>
+
+<p>... Ruby would complain with an <code>undefined local variable or method &#39;bear&#39;</code> error.</p>
+
+<p>The final line of code that&#39;s executed:</p>
+
+<div><pre><code class="language-ruby">puts &#39;Professor Coldheart flees to the Land Without Feelings.&#39;</code></pre></div>
+
+<p>... is outside of the loop, so it&#39;s processed only once. It outputs:</p>
+
+<div><pre><code class="language-none">Professor Coldheart flees to the Land Without Feelings.</code></pre></div>
+
+<p>Let&#39;s take one last look at the entire program and output:</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]
+
+bears.each do |bear|
+  puts &quot;#{bear} Bear battles Professor Coldheart&quot;
+end
+
+puts &#39;Professor Coldheart flees to the Land Without Feelings.&#39;</code></pre></div>
+
+<p>Output:</p>
+
+<div><pre><code class="language-none">Cheer Bear battles Professor Coldheart
+Funshine Bear battles Professor Coldheart
+Love-a-lot Bear battles Professor Coldheart
+Grumpy Bear battles Professor Coldheart
+Professor Coldheart flees to the Land Without Feelings.</code></pre></div>
+
+<p><img src="http://vignette1.wikia.nocookie.net/carebears/images/7/72/Professor_Coldheart_-_Care_Bears.jpg" alt=""></p>
+
+<p>Let&#39;s try another <code>.each</code> loop.</p>
+
+<div><pre><code class="language-ruby">numbers = [1, 2, 3, 4, 5]
+
+numbers.each do |number|
+  puts &quot;#{number} * 5 is equal to #{number * 5}&quot;
+end</code></pre></div>
+
+<p>Output:</p>
+
+<div><pre><code class="language-none">1 * 5 is equal to 5
+2 * 5 is equal to 10
+3 * 5 is equal to 15
+4 * 5 is equal to 20
+5 * 5 is equal to 25</code></pre></div>
+
+<p>Another way to write this is:</p>
+
+<div><pre><code class="language-ruby">[1, 2, 3, 4, 5].each do |number|
+  puts &quot;#{number} * 5 is equal to #{number * 5}&quot;
+end</code></pre></div>
+
+<p>In the example above, I never set up the local variable <code>numbers</code>. Instead I just set up an array and immediately called <code>.each</code> on it.</p>
+
+<h3 id="toc_43"><code>do...end</code> vs <code>{ }</code></h3>
+
+<p>You&#39;ll often come across examples that use <code>{ }</code> instead of <code>do...end</code>. The open curly <code>{</code> is the <code>do</code> and the close curly <code>}</code> is the <code>end</code>.</p>
+
+<p>Ruby coders usually use curlys for simpler iteration loops that only contain one line of code in their code block. For example, the loop above could be written like this:</p>
+
+<div><pre><code class="language-ruby">[1, 2, 3, 4, 5].each { |number| puts &quot;#{number} * 5 is equal to #{number * 5}&quot; }</code></pre></div>
+
+<p>Notice the above example is the same as the earlier <code>do...end</code> block, except that everything is on one line, and <code>do</code> has been substituted with <code>{</code>, and <code>end</code> with <code>}</code>.</p>
+
+<p>You may even find curlys used on multiple lines:</p>
+
+<div><pre><code class="language-ruby">[1, 2, 3, 4, 5].each { |number|
+  puts &quot;#{number} * 5 is equal to #{number * 5}&quot;
+}</code></pre></div>
+
+<p>This is also valid Ruby code, but is not common practice.</p>
+
+<p>As you&#39;re just starting out, it&#39;s recommended that you always use <code>do...end</code> over multiple lines until you firmly grasp iteration. I only bring up the curlys as you will find examples like this when you&#39;re looking up the documentation.</p>
+
+<h3 id="toc_44"><code>.map</code></h3>
+
+<p><code>.map</code> transforms each item in an array. It&#39;s the second most common way of iterating over an array.</p>
+
+<p>Let&#39;s say we wanted to create an HTML page for the Care Bear battle, and we want each attack to be a list item (<code>&lt;li&gt;</code> tag):</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]
+
+list_item_bears = bears.map do |bear|
+  &quot;  &lt;li&gt;#{bear} Bear battles Professor Coldheart&lt;/li&gt;&quot;
+end
+
+puts &#39;&lt;ul&gt;&#39;
+puts list_item_bears
+puts &#39;&lt;/ul&gt;&#39;</code></pre></div>
+
+<p>When we run this progarm, we&#39;ll see the bears all set up nicely in a list that we can copy to our HTML page:</p>
+
+<div><pre><code class="language-none">&lt;ul&gt;
+  &lt;li&gt;Cheer Bear battles Professor Coldheart&lt;/li&gt;
+  &lt;li&gt;Funshine Bear battles Professor Coldheart&lt;/li&gt;
+  &lt;li&gt;Love-a-lot Bear battles Professor Coldheart&lt;/li&gt;
+  &lt;li&gt;Grumpy Bear battles Professor Coldheart&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+<p>Map has transformed each bear in the array to a sentence enclosed in <code>&lt;li&gt;</code> tags.</p>
+
+<p>Notice that we put this into the <code>list_item_bears</code> variable as well, and then used that variable afterwords. This is because <code>.map</code> is a method that returns a value, and we are putting that return value into a variable.</p>
+
+<p><code>.each</code> from our original example also returns a value -- but that value is the array that <code>.each</code> was called on, so it&#39;s uncommon to assign the results of <code>.each</code> to a variable.</p>
+
+<p>Note that our original array hasn&#39;t been touched. If we check the value of our original array:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bears</code></pre></div>
+
+<p>We&#39;d get:</p>
+
+<div><pre><code class="language-ruby">=&gt; [&quot;Cheer&quot;, &quot;Funshine&quot;, &quot;Love-a-lot&quot;, &quot;Grumpy&quot;]</code></pre></div>
+
+<p>Don&#39;t worry if you don&#39;t fully grasp <code>.map</code> just yet: you may not even fully understand it by the end of this course. These are complex concepts.</p>
+
+<h3 id="toc_45"><code>.map!</code></h3>
+
+<p><code>.map!</code> is the same as <code>.map</code>, except it changes the array it&#39;s called on. In computer science, changing the value of something is called <strong><em>mutation</em></strong>.</p>
+
+<p>Let&#39;s try it out with the previous example:</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]
+
+bears.map! do |bear|
+  &quot;  &lt;li&gt;#{bear} Bear battles Professor Coldheart&lt;/li&gt;&quot;
+end
+
+puts &#39;&lt;ul&gt;&#39;
+puts bears
+puts &#39;&lt;/ul&gt;&#39;</code></pre></div>
+
+<p>This outputs:</p>
+
+<div><pre><code class="language-none">&lt;ul&gt;
+  &lt;li&gt;Cheer Bear battles Professor Coldheart&lt;/li&gt;
+  &lt;li&gt;Funshine Bear battles Professor Coldheart&lt;/li&gt;
+  &lt;li&gt;Love-a-lot Bear battles Professor Coldheart&lt;/li&gt;
+  &lt;li&gt;Grumpy Bear battles Professor Coldheart&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+<p>It&#39;s the exact same output as before, except this time I didn&#39;t need to assign the return result of map to a variable. This is because <code>bears</code> was mutated by the <code>.map!</code> method.</p>
+
+<p>If we look at <code>bears</code> now, we can see they have been changed:</p>
+
+<div><pre><code class="language-ruby">irb &gt; bears
+=&gt; [
+    &quot;  &lt;li&gt;Cheer Bear battles Professor Coldheart&lt;/li&gt;&quot;,
+    &quot;  &lt;li&gt;Funshine Bear battles Professor Coldheart&lt;/li&gt;&quot;,
+    &quot;  &lt;li&gt;Love-a-lot Bear battles Professor Coldheart&lt;/li&gt;&quot;,
+    &quot;  &lt;li&gt;Grumpy Bear battles Professor Coldheart&lt;/li&gt;&quot;
+  ]</code></pre></div>
+
+<p><small>(Note: I separated the output onto separate lines for easy reading.)</small></p>
+
+<p>The original array we set up with:</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]</code></pre></div>
+
+<p>... no longer exists.</p>
+
+<h3 id="toc_46"><code>!</code> methods</h3>
+
+<p>In Ruby, it&#39;s common to put a <code>!</code> after methods that mutate data. That&#39;s why the mutating <code>.map!</code> version has a <code>!</code> at the end of it it.</p>
+
+<p>Sometimes a <code>!</code> is called a &#39;<strong><em>bang</em></strong>&#39;, as it&#39;s easier to say than &#39;<strong><em>exclamation mark</em></strong>&#39;.</p>
+
+<p>Not all mutating methods have a <code>!</code> though. For example:</p>
+
+<div><pre><code class="language-ruby">bears = [&#39;Cheer&#39;, &#39;Funshine&#39;, &#39;Love-a-lot&#39;, &#39;Grumpy&#39;]
+puts &#39;Your bears:&#39;
+puts bears
+puts
+
+bears.pop
+puts &#39;Your bears after the `pop`:&#39;
+puts bears</code></pre></div>
+
+<p>Output:</p>
+
+<div><pre><code class="language-none">Your bears:
+Cheer
+Funshine
+Love-a-lot
+Grumpy
+
+Your bears after the `pop`:
+Cheer
+Funshine
+Love-a-lot</code></pre></div>
+
+<p><em>Oh no! Grumpy Bear has disappeared!</em></p>
+
+<p>This is because <code>pop</code> mutates even though pop doesn&#39;t have a <code>!</code> bang. There&#39;s some inconsistancy with the use of <code>!</code> throughout the Ruby language, but a <code>!</code> at the end of a method is a sign it&#39;s a more destructive version of the bang-less version of the method.</p>
+
+<h3 id="toc_47">More iterative methods</h3>
+
+<p>There are many iterative methods, each serving a useful purpose and each used in a different way:</p>
+
+<h4 id="toc_48"><code>.reduce</code> / combines elements</h4>
+
+<div><pre><code class="language-ruby">sum = [10, 20, 30, 40].reduce(0) do |number, total|
+  total = total + number
+end
+puts sum # outputs 100</code></pre></div>
+
+<h4 id="toc_49"><code>.sort_by</code> / sorts elements</h4>
+
+<div><pre><code class="language-ruby">last_names = [&#39;Cox&#39;, &#39;Ambalakarar&#39;, &#39;Khan&#39;,  &#39;Chang&#39;]
+
+names_sorted_by_length = last_names.sort_by do |name|
+  name.length
+end
+
+names_sorted_by_length # [&quot;Cox&quot;, &quot;Khan&quot;, &quot;Chang&quot;, &quot;Ambalakarar&quot;]</code></pre></div>
+
+<h4 id="toc_50"><code>.select</code> / selects elements that meet a criteria</h4>
+
+<div><pre><code class="language-ruby">last_names = [&#39;Cox&#39;, &#39;Ambalakarar&#39;, &#39;Khan&#39;,  &#39;Chang&#39;]
+
+names_that_start_with_c = last_names.select do |name|
+  name.chars.first == &#39;C&#39;
+end
+
+names_that_start_with_c # [&quot;Cox&quot;, &quot;Chang&quot;]</code></pre></div>
+
+<p>Checkout https://ruby-doc.org/core-2.4.1/Enumerable.html for even more iterative methods</p>
+
+<h2 id="toc_51">Iterating Through Hashes</h2>
+
+<p>As hash contains both a <code>key</code> a <code>value</code>, we have to specify variables for both of those when we iterate through a hash.</p>
+
+<p>For example, let&#39;s say we&#39;d like to describe in more detail how the Care Bears battle goes:</p>
+
+<div><pre><code class="language-ruby">bears = {
+  &#39;Cheer&#39;      =&gt; &#39;fires an uzi at&#39;,
+  &#39;Funshine&#39;   =&gt; &#39;jabs forward with a sword impaling&#39;,
+  &#39;Love-a-lot&#39; =&gt; &#39;throws a grenade at&#39;,
+  &#39;Grumpy&#39;     =&gt; &#39;shoots a poison tipped arrow at&#39;
+}
+
+bears.each do |bear, action|
+  puts &quot;#{bear} Bear #{action} Professor Coldheart&quot;
+end
+
+puts
+puts &#39;Professor Coldheart dies in a mound of flesh and bones as&#39;
+
+bears.each do |bear, action|
+  print &quot;#{bear} Bear, &quot;
+end
+
+puts
+puts &#39;all let out blood thirsty roars!&#39;</code></pre></div>
+
+<p>Output:</p>
+
+<div><pre><code class="language-none">Cheer Bear fires an uzi at Professor Coldheart
+Funshine Bear jabs forward with a sword impaling Professor Coldheart
+Love-a-lot Bear throws a grenade at Professor Coldheart
+Grumpy Bear shoots a poison tipped arrow at Professor Coldheart
+
+Professor Coldheart dies in a mound of flesh and bones as
+Cheer Bear, Funshine Bear, Love-a-lot Bear, Grumpy Bear,
+all let out blood thirsty roars!</code></pre></div>
+
+<p>In this example we iterate through our hash twice. During each iteration, we setup the <code>key</code> to be stored in the variable <code>bear</code> and the <code>value</code> to be stored in the variable <code>action</code>.</p>
+
+<p>Notice that during our second iteration of the hash:</p>
+
+<div><pre><code class="language-ruby">bears.each do |bear, action|
+  print &quot;#{bear} Bear, &quot;
+end</code></pre></div>
+
+<p>We set up a local variable called <code>action</code> even though we never used <code>action</code> in the <code>do...end</code> block. This is because hashes are always <code>key - value</code> pairs, and you need to specify both regardless when iterating.</p>
+
+<p>One technique programmers use when they&#39;re forced to set a variable name they don&#39;t need is to use an underscore at the start of that variable. So for example, we could put:</p>
+
+<div><pre><code class="language-ruby">bears.each do |bear, _action|
+  print &quot;#{bear} Bear, &quot;
+end</code></pre></div>
+
+<p>This is like saying:</p>
+
+<blockquote>
+<p>Yeah, I don&#39;t really want the <code>_action</code> variable, but Ruby is making me set it just so I can iterate through the hash. Eesh!</p>
+</blockquote>
+
+<p><img src="https://s-media-cache-ak0.pinimg.com/originals/28/44/13/284413cc8247c884e3ad04342fc7fc00.jpg" alt=""></p>
+
+<h2 id="toc_52">Other Enumerable Methods</h2>
+
+<p>You can use the other enumerable methods on hashes as well.</p>
+
+<p>In our Care Bear story, there&#39;s only so much room in the jeep and we want to bring only the most powerful Care Bears. Let&#39;s ditch the Bears that do little damage.</p>
+
+<p>We can use <code>.select</code> to extract the bears that do more than 50 damage:</p>
+
+<div><pre><code class="language-ruby">bears = {
+  &#39;Cheer&#39;      =&gt; { action: &#39;fires an uzi at&#39;, damage: 90 },
+  &#39;Funshine&#39;   =&gt; { action: &#39;jabs forward with a sword impaling&#39;, damage: 10 },
+  &#39;Love-a-lot&#39; =&gt; { action: &#39;throws a grenade at&#39;, damage: 80 },
+  &#39;Grumpy&#39;     =&gt; { action: &#39;shoots a poison tipped arrow at&#39;, damage: 20 }
+}
+
+useful_bears = bears.select do |_bear, attributes|
+  attributes[:damage] &gt; 50
+end
+
+puts &quot;Let&#39;s bring &quot;
+useful_bears.each do |bear, _attributes|
+  puts bear
+end
+puts &#39;to the battle as they do the most damage.&#39;</code></pre></div>
+
+<p>Output:</p>
+
+<div><pre><code class="language-none">Let&#39;s bring
+Cheer
+Love-a-lot
+to the battle as they do the most damage.</code></pre></div>
+
+<p>Notice how the first time we iterate through the hash:</p>
+
+<div><pre><code class="language-ruby">useful_bears = bears.select do |bear, attributes|
+  attributes[:damage] &gt; 50
+end</code></pre></div>
+
+<p>... we only use <code>attributes</code>, the <code>value</code> of the <strong><em>key - value</em></strong> pair.</p>
+
+<p>And the second time we iterate through the hash:</p>
+
+<div><pre><code class="language-ruby">useful_bears.each do |bear, attributes|
+  puts bear
+end</code></pre></div>
+
+<p>... we only use <code>bear</code>, the <code>key</code> of the <strong><em>key - value</em></strong> pair.</p>
+
+<p><br></p>
+
+<hr>
+
+<h1 id="toc_53">Wrap-up</h1>
+
+<p>We&#39;ve covered a lot of material here. Don&#39;t worry if you didn&#39;t take it all in. It can take some time to fully understand these concepts.</p>
+
+<p>What&#39;s important to take away for today is:</p>
+
+<ul>
+<li>when to use an array</li>
+<li>when to use an hash</li>
+<li>how to identify an array (with square brackets <code>[]</code>)</li>
+<li>how to identify a hash (with curly braces <code>{}</code>)</li>
+<li>that both arrays and hashes are collections of other objects</li>
+<li>that there are useful methods you can use on both of these</li>
+<li>how to access the documentation to perform all of the above</li>
+</ul>
+
+<hr>
+
+<h1 id="toc_54">Further Resources</h1>
+
+<p><strong>Ruby Array Class Documentation</strong>
+<a href="https://ruby-doc.org/core-2.4.1/Array.html">https://ruby-doc.org/core-2.4.1/Array.html</a></p>
+
+<p><strong>Ruby Hash Class Documentation</strong>
+<a href="https://ruby-doc.org/core-2.4.1/Hash.html">https://ruby-doc.org/core-2.4.1/Hash.html</a></p>
+
+<p><strong>Ruby Enumerable Module Documentation</strong>
+<a href="https://ruby-doc.org/core-2.4.1/Enumerable.html">https://ruby-doc.org/core-2.4.1/Enumerable.html</a></p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0}],string:{pattern:/(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":/[a-z0-9_]+(?=\()/i,number:/\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,operator:/--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,punctuation:/[{}[\];(),.:]/};
+</script>
+
+<script type="text/javascript">
+!function(e){e.languages.ruby=e.languages.extend("clike",{comment:/#(?!\{[^\r\n]*?\}).*/,keyword:/\b(alias|and|BEGIN|begin|break|case|class|def|define_method|defined|do|each|else|elsif|END|end|ensure|false|for|if|in|module|new|next|nil|not|or|raise|redo|require|rescue|retry|return|self|super|then|throw|true|undef|unless|until|when|while|yield)\b/});var n={pattern:/#\{[^}]+\}/,inside:{delimiter:{pattern:/^#\{|\}$/,alias:"tag"},rest:e.util.clone(e.languages.ruby)}};e.languages.insertBefore("ruby","keyword",{regex:[{pattern:/%r([^a-zA-Z0-9\s\{\(\[<])(?:[^\\]|\\[\s\S])*?\1[gim]{0,3}/,inside:{interpolation:n}},{pattern:/%r\((?:[^()\\]|\\[\s\S])*\)[gim]{0,3}/,inside:{interpolation:n}},{pattern:/%r\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}[gim]{0,3}/,inside:{interpolation:n}},{pattern:/%r\[(?:[^\[\]\\]|\\[\s\S])*\][gim]{0,3}/,inside:{interpolation:n}},{pattern:/%r<(?:[^<>\\]|\\[\s\S])*>[gim]{0,3}/,inside:{interpolation:n}},{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0}],variable:/[@$]+[a-zA-Z_][a-zA-Z_0-9]*(?:[?!]|\b)/,symbol:/:[a-zA-Z_][a-zA-Z_0-9]*(?:[?!]|\b)/}),e.languages.insertBefore("ruby","number",{builtin:/\b(Array|Bignum|Binding|Class|Continuation|Dir|Exception|FalseClass|File|Stat|File|Fixnum|Fload|Hash|Integer|IO|MatchData|Method|Module|NilClass|Numeric|Object|Proc|Range|Regexp|String|Struct|TMS|Symbol|ThreadGroup|Thread|Time|TrueClass)\b/,constant:/\b[A-Z][a-zA-Z_0-9]*(?:[?!]|\b)/}),e.languages.ruby.string=[{pattern:/%[qQiIwWxs]?([^a-zA-Z0-9\s\{\(\[<])(?:[^\\]|\\[\s\S])*?\1/,inside:{interpolation:n}},{pattern:/%[qQiIwWxs]?\((?:[^()\\]|\\[\s\S])*\)/,inside:{interpolation:n}},{pattern:/%[qQiIwWxs]?\{(?:[^#{}\\]|#(?:\{[^}]+\})?|\\[\s\S])*\}/,inside:{interpolation:n}},{pattern:/%[qQiIwWxs]?\[(?:[^\[\]\\]|\\[\s\S])*\]/,inside:{interpolation:n}},{pattern:/%[qQiIwWxs]?<(?:[^<>\\]|\\[\s\S])*>/,inside:{interpolation:n}},{pattern:/("|')(#\{[^}]+\}|\\(?:\r?\n|\r)|\\?.)*?\1/,inside:{interpolation:n}}]}(Prism);
+</script>
+
+<script type="text/javascript">
+Prism.languages.markup={comment:/<!--[\w\W]*?-->/,prolog:/<\?[\w\W]+?\?>/,doctype:/<!DOCTYPE[\w\W]+?>/,cdata:/<!\[CDATA\[[\w\W]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,inside:{punctuation:/[=>"']/}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
+</script>
+
+
+</body>
+
+</html>
