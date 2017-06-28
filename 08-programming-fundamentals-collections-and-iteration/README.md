@@ -561,14 +561,14 @@ You can imagine a web browser parsing it like so when it's trying to figure out 
 
 ```ruby
 styles = [
-  'body'      => { background: 'yellow' },
-  'h1'        => { color: 'tomato', font: '25px' },
-  '.inverted' => { color: 'white', background: 'black' },
-  '.normal'   => { color: 'black', background: 'white' },
-  '.big'      => { font: '20px' }
+  { 'body'      => { background: 'yellow' } },
+  { 'h1'        => { color: 'tomato', font: '25px' } },
+  { '.inverted' => { color: 'white', background: 'black' } },
+  { '.normal'   => { color: 'black', background: 'white' } },
+  { '.big'      => { font: '20px' } }
 ]
 
-page = [
+page = {
   html: { parent: :root },
   head: { parent: :html },
   title: { parent: :head, content: 'Kitty Catty Ipsum' },
@@ -577,7 +577,7 @@ page = [
     { p: { content: 'Hide head under blanket so no one can see. Proudly present butt to human. Then cats take over the world kitty loves pigs.',
            attributes: [id: 'leading', class: ['inverted', 'big']] } }
   ]
-]
+}
 ```
 
 You can see in the above example we need to use both hashes and arrays together.
