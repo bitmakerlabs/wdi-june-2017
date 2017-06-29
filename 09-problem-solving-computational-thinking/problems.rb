@@ -1,36 +1,49 @@
 # Problem 1: Get the total sum of a list of numbers
-numbers = [1, 5, 2, 11, 1]
-# 0 + 1 = 1
-# 1 + 5 = 6
-# 6 + 2 = 8
-# 8 + 11 = 19
-# 19 + 1 = 20
+# numbers = [1, 5, 2, 11, 1]
+# # 0 + 1 = 1
+# # 1 + 5 = 6
+# # 6 + 2 = 8
+# # 8 + 11 = 19
+# # 19 + 1 = 20
+#
+# # current_sum = 0
+# numbers.each do |current_number|
+#   current_sum = current_sum + current_number
+# end
+# puts current_sum
+#
+# # Problem 2: Find frequency of the letter "s" in a string
+#
+# word = "kllmlsakalsdjssslksdss"
+#
+# def count_letter(letter_to_look_for, string)
+#   count = 0
+#
+#   string.each_char do |letter|
+#     if letter == letter_to_look_for
+#       count += 1
+#     end
+#   end
+#   puts count
+# end
+#
+# answer = count_letter("s", word)
+# puts answer
+#
+# # Problem 3: Find frequency of the letter "a" in a string
+# another_word = "kldsjfldskjfj"
+#
+# count_letter("a", another_word)
+#
+# # Problem 4: Find the most frequent letter in a string
+#
+# # Problem 5: Find the number of violations in each violation category
+# # {
+# garbage_and_refuse: 1,
+#
+#
+# # }
 
-# current_sum = 0
-numbers.each do |current_number|
-  current_sum = current_sum + current_number
-end
-puts current_sum
-
-# Problem 2: Find frequency of the letter "s" in a string
-word = "kllmlsakalsdjssslksdss"
-
-s_count = 0
-
-word.each_char do |letter|
-  if letter == "s"# it's an s
-    s_count += 1
-  end
-end
-puts s_count
-
-# Problem 3: Find frequency of the letter "a" in a string
-
-# Problem 4: Find the most frequent letter in a string
-
-# Problem 5: Find the number of violations in each violation category
-
-# Problem 6: Find the total money owed for each violation category
 
 violations = [ {money_owed: 50.0, violation_category: "Garbage and Refuse", date: "2012-11-01 00:00:00", inspection_id: "232528"},
 {money_owed: 10.0, violation_category: "Unsanitary Conditions", date: "2012-12-26 00:00:00", inspection_id: "230544"},
@@ -40,8 +53,8 @@ violations = [ {money_owed: 50.0, violation_category: "Garbage and Refuse", date
 {money_owed: 70.0, violation_category: "Animals and Pests", date: "2012-12-19 00:00:00", inspection_id: "230404"},
 {money_owed: 22.0, violation_category: "Animals and Pests", date: "2012-12-19 00:00:00", inspection_id: "230403"},
 {money_owed: 56.0, violation_category: "Garbage and Refuse", date: "2012-12-19 00:00:00", inspection_id: "230402"},
-{money_owed: 92.0, violation_category: "Garbage and Refuse", date: "2012-12-19 00:00:00", inspection_id: "230401"},
 {money_owed: 50.0, violation_category: "Building Conditions", date: "2012-12-19 00:00:00", inspection_id: "230400"},
+{money_owed: 92.0, violation_category: "Garbage and Refuse", date: "2012-12-19 00:00:00", inspection_id: "230401"},
 {money_owed: 69.0, violation_category: "Garbage and Refuse", date: "2012-12-19 00:00:00", inspection_id: "230399"},
 {money_owed: 38.0, violation_category: "Animals and Pests", date: "2012-12-19 00:00:00", inspection_id: "230398"},
 {money_owed: 31.0, violation_category: "Garbage and Refuse", date: "2012-12-19 00:00:00", inspection_id: "230397"},
@@ -184,3 +197,30 @@ violations = [ {money_owed: 50.0, violation_category: "Garbage and Refuse", date
 {money_owed: 70.0, violation_category: "Vegetation", date: "2012-09-19 00:00:00", inspection_id: "223815"},
 {money_owed: 36.0, violation_category: "Unsanitary Conditions", date: "2012-09-19 00:00:00", inspection_id: "223814"},
 {money_owed: 44.0, violation_category: "Garbage and Refuse", date: "2012-09-19 00:00:00", inspection_id: "223813"} ]
+
+
+violation_counts = {}
+
+#iterate through the collection of violations
+violations.each do |violation_hash|
+  current_violation_category = violation_hash[:violation_category]
+  if violation_counts.include?(current_violation_category) # category is in hash already
+    # add 1 to the count
+    violation_counts[current_violation_category] += 1
+    # same as:
+    # current_count = violation_counts[current_violation_category]
+    # violation_counts[current_violation_category] = current_count + 1
+
+  else # it's not in the hash and we need to add it with the val 1
+    violation_counts[current_violation_category] = 1
+  end
+end
+
+# go through each k,v pair in violation_counts
+violation_counts.each do |category, count|
+  # and print the key (category) and value (number of violations)
+  puts "There are #{count} violations in the category #{category}"
+end
+
+# Problem 6: Find the total money owed for each violation category
+
