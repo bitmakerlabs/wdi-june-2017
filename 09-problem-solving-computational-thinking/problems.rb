@@ -1,4 +1,16 @@
 # Problem 1: Get the total sum of a list of numbers
+numbers = [1, 5, 2, 11, 1]
+# 0 + 1 = 1
+# 1 + 5 = 6
+# 6 + 2 = 8
+# 8 + 11 = 19
+# 19 + 1 = 20
+
+current_sum = 0
+numbers.each do |current_number|
+  current_sum = current_sum + current_number
+end
+
 
 # Problem 2: Find frequency of the letter "s" in a string
 
