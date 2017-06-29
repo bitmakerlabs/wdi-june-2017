@@ -6,13 +6,23 @@ numbers = [1, 5, 2, 11, 1]
 # 8 + 11 = 19
 # 19 + 1 = 20
 
-current_sum = 0
+# current_sum = 0
 numbers.each do |current_number|
   current_sum = current_sum + current_number
 end
-
+puts current_sum
 
 # Problem 2: Find frequency of the letter "s" in a string
+word = "kllmlsakalsdjssslksdss"
+
+s_count = 0
+
+word.each_char do |letter|
+  if letter == "s"# it's an s
+    s_count += 1
+  end
+end
+puts s_count
 
 # Problem 3: Find frequency of the letter "a" in a string
 
