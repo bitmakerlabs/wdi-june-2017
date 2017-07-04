@@ -1,6 +1,4 @@
 class Game
-  attr_reader :width, :height
-  attr_accessor :players
 
   def initialize(number_of_players)
     number_of_players.times do
@@ -13,7 +11,7 @@ class Game
     print "How many people are adventuring? "
     number_of_players = gets.chomp.to_i
 
-    g = new(number_of_players)
+    g = Game.new(number_of_players)
     game.turn
     end
   end
@@ -34,6 +32,22 @@ class Game
         player.y += new_y
       end
     end
+  end
+
+  def players
+    return @players
+  end
+
+  def players=(players)
+    @players = players
+  end
+
+  def width
+    return @width
+  end
+
+  def height
+    return @height
   end
 
 end
