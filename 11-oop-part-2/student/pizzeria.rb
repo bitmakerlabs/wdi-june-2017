@@ -30,10 +30,6 @@ class Pizzeria
     return @@pizzas_in_the_world
   end
 
-  def bake(pizza)
-    pizza.bake
-  end
-
   def completely_cut_pizza(pizza)
     4.times do
       pizza.cut
