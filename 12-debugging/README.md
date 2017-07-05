@@ -1,4 +1,4 @@
-# Debugging & Testing in Ruby
+# Debugging
 
 ## Intro
 At least half of your time as a developer is going to be spent debugging or testing broken code.  One thing that sets apart really good developers from not so good developers is a really good developer knows that they are going to make a lot of mistakes, and knows what precautions to take in order to mitigate that.  This lesson will show you some habits and tools you can adopt to improve your adventures in debugging.
@@ -7,7 +7,7 @@ At least half of your time as a developer is going to be spent debugging or test
 1. What's a bug?
 2. Good habits for avoiding bugs
 3. Debugging techniques
-4. Using a debugger (pry) 
+4. Using a debugger (pry)
 5. Common error messages
 
 ## What is a bug? (less than 5 minutes)

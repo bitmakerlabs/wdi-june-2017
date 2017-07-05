@@ -180,31 +180,31 @@ violations.each do |current_violation|
   category_stats = violation_stats[current_category_name]
 
   if category_stats[:total_owed] == nil
-    category_stats[:total_owed] = {total_owed: current_violation[:money_owed]}
+    category_stats[:total_owed] = current_violation[:money_owed]
   else
     category_stats[:total_owed] += current_violation[:money_owed]
   end
 end
-
-violations.each do |current_violation|
-  current_category_name = current_violation[:violation_category]
-  current_date = current_violation[:date]
-  category_stats = violation_stats[current_category_name]
-
-  if category_stats[:earliest_violation] > current_date
-    category_stats[:earliest_violation] = current_date
-  end
-
-  if category_stats[:latest_violation] < current_date
-    category_stats[:latest_violation] = current_date
-  end
-end
-
-violation_stats.each do |category, stats|
-  count = stats[:count]
-  fines = stats[:total_owed]
-  earliest = stats[:earliest_violation]
-  latest = stats[:latest_violation]
-  puts "There are #{count} violations in the category #{category} for a total of #{fines} in fines."
-  puts "The earliest violation is #{earliest} and the latest violation is #{latest}"
-end
+#
+# violations.each do |current_violation|
+#   current_category_name = current_violation[:violation_category]
+#   current_date = current_violation[:date]
+#   category_stats = violation_stats[current_category_name]
+#
+#   if category_stats[:earliest_violation] > current_date
+#     category_stats[:earliest_violation] = current_date
+#   end
+#
+#   if category_stats[:latest_violation] < current_date
+#     category_stats[:latest_violation] = current_date
+#   end
+# end
+#
+ violation_stats.each do |category, stats|
+   count = stats[:count]
+   fines = stats[:total_owed]
+#   earliest = stats[:earliest_violation]
+#   latest = stats[:latest_violation]
+   puts "There are #{count} violations in the category #{category} for a total of #{fines} in fines."
+#   puts "The earliest violation is #{earliest} and the latest violation is #{latest}"
+ end
