@@ -1,8 +1,10 @@
 class Game
+  attr_reader :width, :height
+  attr_accessor :players
 
   def initialize(number_of_players)
     number_of_players.times do
-      @players << Player.new((0..@width).to_a.sample, (0..@height).to_a.sample)
+      @players << Player.new((0..@width).sample, (0..@height).sample)
     end
   end
 
@@ -32,22 +34,6 @@ class Game
         player.y += new_y
       end
     end
-  end
-
-  def players
-    return @players
-  end
-
-  def players=(players)
-    @players = players
-  end
-
-  def width
-    return @width
-  end
-
-  def height
-    return @height
   end
 
 end

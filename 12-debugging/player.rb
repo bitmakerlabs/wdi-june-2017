@@ -21,7 +21,15 @@ class Player
     return @x
   end
 
+  def x=(x)
+    @x = x
+  end
+
   def y
     return @y
+  end
+
+  def y=(y)
+    @y = y
   end
 end
