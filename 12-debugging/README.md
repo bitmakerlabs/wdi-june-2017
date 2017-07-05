@@ -8,6 +8,7 @@ At least half of your time as a developer is going to be spent debugging or test
 2. Good habits for avoiding bugs
 3. Debugging techniques
 4. Using a debugger (pry) 
+5. Common error messages
 
 ## What is a bug? (less than 5 minutes)
 - Code that won't run at all (error message)
