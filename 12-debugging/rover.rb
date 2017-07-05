@@ -43,7 +43,7 @@ class Rover
   end
 
   def turn(which_way)
-    if which_way = 'L'
+    if which_way == 'L'
       turn_left
     elsif which_way == 'R'
       turn_right
@@ -65,7 +65,7 @@ class Rover
   end
 
   def report_position
-    return "I am at #{@x}, #{@y} facing #{@dir}"
+    return "I am at #{@x}, #{@y} facing #{@direction}"
   end
 
 end
