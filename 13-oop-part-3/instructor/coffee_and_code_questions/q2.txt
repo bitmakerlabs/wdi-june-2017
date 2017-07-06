@@ -1,0 +1,8 @@
+Write a Human class
+
+- A human is initialized with its name.
+- A human can own multiple cats.
+- A human can adopt another new cat at any time.
+- A human can feed, entertain, and pet all of its cats at the same time.
+- A human is considered crazy if it owns more than some large number of cats
+(you decide how many)

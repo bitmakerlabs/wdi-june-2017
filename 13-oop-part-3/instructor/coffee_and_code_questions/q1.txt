@@ -1,0 +1,11 @@
+Write a Cat class
+
+- A cat is initialized with its name.
+- A cat is happy, if and only if it is fed, rested, entertained, and adopted.
+- It is possible to play with a cat in order to entertain it. But if you play with a cat, it becomes tired.
+- It is possible to pet a cat. When you pet a cat, it will either purr if it's happy,
+  otherwise it will hiss.
+- Once a cat is adopted, it is given a furrever home and can never be un-adopted.
+
+- What other behaviours do you need to adequately implement this class?
+- What kind of state do you need to support all of these behaviours?
