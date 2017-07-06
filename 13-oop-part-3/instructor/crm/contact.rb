@@ -1,5 +1,8 @@
 class Contact
 
+  attr_reader :id
+  attr_accessor :first_name, :last_name, :email, :notes
+
   @@contacts = []
   @@next_id  = 1000
 
@@ -26,44 +29,6 @@ class Contact
   def self.find(id)
     # Exercise left to the student
     # Make sure to return ONE instance of Contact
-  end
-
-  # Readers
-  def id
-    @id
-  end
-
-  def first_name
-    @first_name
-  end
-
-  def last_name
-    @last_name
-  end
-
-  def email
-    @email
-  end
-
-  def notes
-    @notes
-  end
-
-  # Writers
-  def first_name=(first_name)
-    @first_name = first_name
-  end
-
-  def last_name=(last_name)
-    @last_name = last_name
-  end
-
-  def email=(email)
-    @email = email
-  end
-
-  def notes=(notes)
-    @notes = notes
   end
 
   # Instance Method
