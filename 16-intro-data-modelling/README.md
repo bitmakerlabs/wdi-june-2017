@@ -9,4 +9,8 @@ Today we'll continue to talk about databases and introduce the idea of relations
   * 1-1
   * 1-many
   * many-many
-* looking for 1-many relationships in data sets
+* rules for storing different relationships
+* finding 1-m relationships
+* different types of many-many relationships
+* making decisions about the fields in your tables
+  * ethics & inclusivity
