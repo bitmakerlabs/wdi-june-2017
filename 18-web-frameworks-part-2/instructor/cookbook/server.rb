@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'recipe'
 
 get '/' do
   redirect to('/recipes')
@@ -17,11 +18,13 @@ get '/blog' do
 end
 
 get '/recipes' do
-  @recipes = [
-    'BBQ Ribs',
-    'Avocado Sushi',
-    'Gluten Free Pancakes'
-  ]
+  # @recipes = [
+  #   'BBQ Ribs',
+  #   'Avocado Sushi',
+  #   'Gluten Free Pancakes'
+  # ]
+
+  @recipes = Recipe.all
 
   erb :recipes
 end
