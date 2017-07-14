@@ -11,7 +11,11 @@ get '/films' do
 end
 
 post '/films' do
-  "POST request: #{params}"
+  Film.create({title: params["title"], description: params["description"],
+               country: params["country"], rating: params["rating"], available: params["available"]})
+  # don't do this:
+  # Film.create(params)
+  redirect to('/')
 end
 
 put '/films' do
