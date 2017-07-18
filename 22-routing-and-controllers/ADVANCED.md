@@ -1,6 +1,6 @@
 # Routing and Controllers - Advanced Concepts
 
-This lesson is meant to come after the Routing and Controllers - Introduction lesson, and introduces some more complex topics.
+This lesson is meant to be given as a breakout after the Routing and Controllers - Introduction lesson. It introduces some more complex topics. 
 
 ## Agenda
 

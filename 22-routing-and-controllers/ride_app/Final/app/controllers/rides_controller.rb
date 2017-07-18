@@ -36,15 +36,15 @@ class RidesController < ApplicationController
 
     @description =
       case @ride_name
-        when 'lorem'
-          lorem_ride
-        when 'bacon'
-          bacon_ride
-        when 'hodor'
-          game_of_thrones_ride
-        else
-          "Sorry, we don't have that ride."
-        end
+      when 'lorem'
+        lorem_ride
+      when 'bacon'
+        bacon_ride
+      when 'hodor'
+        game_of_thrones_ride
+      else
+        "Sorry, we don't have that ride."
+      end
   end
 
   def about
@@ -62,6 +62,5 @@ class RidesController < ApplicationController
   def game_of_thrones_ride
     'Hodor, hodor; hodor HODOR hodor, hodor hodor? Hodor hodor - hodor...'
   end
-
 
 end

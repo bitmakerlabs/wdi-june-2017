@@ -432,5 +432,5 @@ end
 
 Let's create a Rails App!
 
-Open [ipsums-fairground.html](ipsums-fairground.html)
+Open [IPSUMS-FAIRGROUND.md](ipsums-fairground.md)
 
