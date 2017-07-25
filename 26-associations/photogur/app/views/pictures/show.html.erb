@@ -13,3 +13,11 @@
     </li>
   <% end %>
 </ul>
+<h2>Tags</h2>
+<ul>
+  <% @picture.tags.each do |tag| %>
+  <li>
+    <%= tag.name %>
+  </li>
+  <% end %>
+</ul>
