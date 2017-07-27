@@ -18,6 +18,24 @@
       <% end %>
     <% end %>
 
+
+    <% if current_user %>
+      <p>
+        <%= link_to 'Home', root_path %> |
+        <%= link_to 'Logout', sessions_path, method: :delete %>
+      </p>
+
+      Hello <%= current_user.email %>, You have <%= current_user.credits %> credits!
+    <% else %>
+      <p>
+        <%= link_to 'Home', root_path %> |
+        <%= link_to 'New User', new_users_path %> |
+        <%= link_to 'Login', new_sessions_path %>
+      </p>
+
+      You must login to see your credits!
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
