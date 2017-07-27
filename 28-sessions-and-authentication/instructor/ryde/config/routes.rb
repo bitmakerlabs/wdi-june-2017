@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   resource :users, only: %i(create new)
+  resource :sessions, only: %i(create new destroy)
 
   root 'rides#index'
 
