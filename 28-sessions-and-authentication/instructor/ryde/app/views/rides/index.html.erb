@@ -1,4 +1,14 @@
 <h1>Available Rides</h1>
 
-<p><%= link_to 'New User', new_users_path %></p>
-<p><%= link_to 'Login', new_sessions_path %></p>
+<%= link_to 'Home', root_path %>
+
+<% if false %>
+  <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
+
+  You have X credits!
+<% else %>
+  <p><%= link_to 'New User', new_users_path %></p>
+  <p><%= link_to 'Login', new_sessions_path %></p>
+
+  You must login to see your credits!
+<% end %>
