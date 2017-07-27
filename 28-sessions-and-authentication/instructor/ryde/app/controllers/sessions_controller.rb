@@ -6,6 +6,9 @@ class SessionsController < ApplicationController
     u = User.find_by(email: params[:session][:email])
 
     if u && u.authenticate(params[:session][:password])
+
+      session[:user_id] = u.id
+
       flash[:notice] = 'Successfully logged in!'
       redirect_to root_url
     else
@@ -18,3 +21,8 @@ class SessionsController < ApplicationController
   def destroy
   end
 end
+
+# These 3 hashes are always available to you in a Rails controller
+# params
+# flash
+# session

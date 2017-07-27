@@ -2,7 +2,7 @@
 
 <%= link_to 'Home', root_path %>
 
-<% if false %>
+<% if session[:user_id] %>
   <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
 
   You have X credits!
