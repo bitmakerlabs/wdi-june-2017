@@ -1,1 +1,16 @@
-<h1>Available Rides</h1>
+<h1>
+  <% if @lang == 'fr' %>
+    <% if @country == 'canada' %>
+      Balade Disponible, eh?
+    <% else %>
+      Balade Disponible
+    <% end %>
+  <% else %>
+    <% if @country == 'canada' %>
+      Available Rydes, eh?
+    <% else %>
+      Available Rydes
+    <% end %>
+  <% end %>
+
+</h1>
