@@ -8,4 +8,8 @@ class RidesController < ApplicationController
     @lang    = params[:lang]
     @country = params[:country]
   end
+
+  def show
+    @ryde_id = params[:id]
+  end
 end
