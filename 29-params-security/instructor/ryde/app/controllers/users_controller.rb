@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
+
+  before_action :find_user, only: %i(edit update)
+  before_action :new_user,  only: %i(new create)
+
   def new
-    @user = User.new
   end
 
   def create
-    @user = User.new
-
     @user.email = params[:user][:email]
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
@@ -26,8 +27,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
-
     unless @user
       flash[:error] = 'You must be logged in to do that!'
       redirect_to root_url
@@ -35,8 +34,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
-
     unless @user
       flash[:error] = 'You must be logged in to do that!'
       redirect_to root_url and return
@@ -55,4 +52,15 @@ class UsersController < ApplicationController
     end
 
   end
+
+private
+
+  def new_user
+    @user = User.new
+  end
+  
+  def find_user
+    @user = current_user
+  end
+
 end
