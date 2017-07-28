@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :rides, only: %i(index show)
 
+  post 'rides/search'
+
   root 'rides#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

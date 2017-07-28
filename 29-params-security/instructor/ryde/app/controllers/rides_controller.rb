@@ -12,4 +12,10 @@ class RidesController < ApplicationController
   def show
     @ryde_id = params[:id]
   end
+
+  def search
+    @statement = "SELECT * FROM rides WHERE driver_name = '" + params[:search][:q] + "'"
+
+    @rides = Ride.find_by_sql(@statement)
+  end
 end
