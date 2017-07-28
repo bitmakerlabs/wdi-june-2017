@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resource :users, only: %i(create new)
+  resource :users, only: %i(create new edit update)
   resource :sessions, only: %i(create new destroy)
 
   resources :rides, only: %i(index show)

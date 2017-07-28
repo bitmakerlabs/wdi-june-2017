@@ -22,6 +22,7 @@
     <% if current_user %>
       <p>
         <%= link_to 'Home', root_path %> |
+        <%= link_to 'Update Account', edit_users_path %> |
         <%= link_to 'Logout', sessions_path, method: :delete %>
       </p>
 
