@@ -42,6 +42,7 @@ class UsersController < ApplicationController
     @user.email                 = params[:user][:email]
     @user.password              = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
+    @user.bio                   = params[:user][:bio]
 
     if @user.save
       flash[:notice] = 'Account successfully updated!'
@@ -58,7 +59,7 @@ private
   def new_user
     @user = User.new
   end
-  
+
   def find_user
     @user = current_user
   end
