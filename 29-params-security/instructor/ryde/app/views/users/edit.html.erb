@@ -8,6 +8,13 @@
   </ul>
 <% end %>
 
+<%
+# A long-standing bug prevents form_for from working
+# automatically with singular resources.
+# As a workaround, specify the URL for the form directly
+# See: http://guides.rubyonrails.org/routing.html
+%>
+
 <%= form_for @user, url: users_path do |f| %>
 
   <div class='field'>
