@@ -1,15 +1,13 @@
 class UsersController < ApplicationController
 
   before_action :find_user, only: %i(edit update)
-  before_action :new_user,  only: %i(new create)
 
   def new
+    @user = User.new
   end
 
   def create
-    @user.email = params[:user][:email]
-    @user.password = params[:user][:password]
-    @user.password_confirmation = params[:user][:password_confirmation]
+    @user = User.new(params[:user])
 
     if @user.save
       flash[:notice] = 'Account successfully created!'
@@ -39,10 +37,7 @@ class UsersController < ApplicationController
       redirect_to root_url and return
     end
 
-    @user.email                 = params[:user][:email]
-    @user.password              = params[:user][:password]
-    @user.password_confirmation = params[:user][:password_confirmation]
-    @user.bio                   = params[:user][:bio]
+    @user.assign_attributes(params[:user])
 
     if @user.save
       flash[:notice] = 'Account successfully updated!'
@@ -55,10 +50,6 @@ class UsersController < ApplicationController
   end
 
 private
-
-  def new_user
-    @user = User.new
-  end
 
   def find_user
     @user = current_user
