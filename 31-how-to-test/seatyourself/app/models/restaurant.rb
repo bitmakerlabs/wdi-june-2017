@@ -1,7 +1,7 @@
 class Restaurant < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
 
-  validates :name, :opening_hour, :closing_hour, presence: true
+  validates :address, :name, :opening_hour, :closing_hour, presence: true
 
   belongs_to :category
   has_many :reservations
@@ -9,6 +9,22 @@ class Restaurant < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
+  def available?(date, number_of_guests)
+    return has_capacity?(date, number_of_guests) && date_in_future?(date)
+  end
+
+  def has_capacity?(date, number_of_guests)
+    # check bookings table, sum up reservations at that time, compare to capacity of restaurant
+    # begin_time
+    # people
+    total_reservations = reservations.where(begin_time: date).map { |reservation| reservation.people }.sum
+    # or this: reservations.where(begin_time: date).sum(&:people)
+    return total_reservations + number_of_guests <= self.capacity
+  end
+
+  def date_in_future?(date)
+    return Time.now < date
+  end
 
   # This method will return a list of times in which a reservation can be made
   def time_slots
