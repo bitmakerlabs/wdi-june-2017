@@ -1,25 +1,33 @@
 def work_out
-  treadmill = Treadmill.first_available
+  warm_up
+  running
+  cool_down
+end
 
+def warm_up
   treadmill.pace = :jogging
   treadmill.set_time(5)
   treadmill.start
   treadmill.stop
+end
 
+def running
   treadmill.pace = :running
   treadmill.set_time(40)
   treadmill.start
   treadmill.stop
+end
 
+def cool_down
   treadmill.pace = :walking
   treadmill.set_time(5)
   treadmill.start
   treadmill.stop
 end
 
-
-
-
+def treadmill
+  Treadmill.first_available
+end
 
 
 
