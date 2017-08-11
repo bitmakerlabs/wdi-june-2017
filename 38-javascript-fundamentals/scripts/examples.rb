@@ -164,3 +164,24 @@ case_statement
 named_function
 sum 5, 6
 function_with_parameters 'first param', 'second param'
+
+
+items = [1, 4, 7]
+items.each do |item|
+  puts item
+end
+
+
+
+
+
+
+
+
+
+x = 5
+def do_stuff
+  puts x
+end
+
+do_stuff
