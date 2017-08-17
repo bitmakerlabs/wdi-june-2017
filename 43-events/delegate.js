@@ -6,14 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var count = 0,
       colors = ['tomato', 'azure', 'green', 'orange', 'purple', 'chartreuse', 'yellow', 'chocolate'];
 
+  var container = document.querySelector('#container');
   var boxMaker = document.querySelector('#box-maker');
+
+  container.addEventListener('click', function(e) {
+    if (e.target.className === 'circle') {
+      e.target.remove();
+    }
+  });
 
   boxMaker.addEventListener('click', function(e) {
       var x = Math.ceil(Math.random() * 400),
           y = Math.ceil(Math.random() * 200),
-          c = Math.ceil(Math.random() * 8);
+          c = Math.ceil(Math.random() * 7);
 
-      var container = document.querySelector('#container');
       var newCircle = document.createElement('div');
 
       e.preventDefault();
@@ -30,4 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       console.log('link was clicked');
   });
+
+
 });
