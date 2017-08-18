@@ -1,0 +1,150 @@
+/*
+  Task List App Styles
+
+  This file contains all of the styles for the Task List App.
+  The styles are organized from general to specific, with styles for specific
+  parts of the interface prefaced with a commented title.
+*/
+
+/* Baseline App Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+h1 {
+  font-weight: 200;
+  text-align: center;
+  color: #990000;
+}
+
+footer {
+  text-align: center;
+}
+
+small {
+  font-size: 0.75rem;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #ccc;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
+/* Area to display remaining task count */
+.status-bar {
+  padding: 1em;
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+.tasks-remaining {
+  float: left;
+  font-size: 0.75rem;
+}
+
+#task-panel {
+  background-color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#task-panel > footer {
+  text-align: left;
+}
+
+/* Task List Container */
+#tasks-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Individual task list items and links within */
+.task {
+  padding: 1em;
+  border-bottom: 1px solid #e4e4e4;
+  cursor: pointer;
+}
+
+.task:last-child {
+  border-bottom: 0;
+}
+
+.task > a {
+  font-size: 20px;
+  color: black;
+}
+
+.task > a:hover {
+  color: #990000;
+}
+
+.task.is-complete > a {
+  color: #ccc;
+  font-weight: 200;
+  text-decoration: line-through;
+}
+
+/* Filter List */
+#todos-filters {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Individual filter items */
+.todo-filter {
+  display: inline-block;
+}
+
+.todo-filter > a {
+  color: black;
+  padding: 0.5em;
+}
+
+.todo-filter.is-active > a {
+  color: white;
+  background-color: #990000;
+}
+
+/* Form for adding a new Todo */
+#new-todo {
+  overflow: auto;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#todo-task {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  padding: 1em;
+}
+
+#todo-task:focus {
+  outline: none;
+}
+
+/* Bitmaker wordmark in footer */
+.footer-wordmark {
+  max-height: 20px;
+  vertical-align: middle;
+}

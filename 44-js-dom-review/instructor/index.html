@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task List</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>My Task List</h1>
+    </header>
+
+    <main id="task-panel">
+      <form id="new-todo" action="/todos" method="post">
+        <input type="text" id="todo-task" name="task" placeholder="What needs to be done?">
+      </form>
+
+      <ul id="tasks-list">
+        <li class="task">
+          <a>Learn to code</a>
+        </li>
+
+        <li class="task is-complete">
+          <a>Learn some HTML</a>
+        </li>
+
+        <li class="task">
+          <a>Learn some CSS</a>
+        </li>
+
+        <li class="task">
+          <a>Learn some Javascript</a>
+        </li>
+
+        <li class="task">
+          <a>Build a cool app</a>
+        </li>
+      </ul>
+
+      <footer class="status-bar">
+        <div class="tasks-remaining"><strong id="counter">5</strong> items left!</div>
+
+        <ul id="todos-filters">
+          <li class="todo-filter all is-active">
+            <a href="#">All</a>
+          </li>
+          <li class="todo-filter active">
+            <a href="#">Active</a>
+          </li>
+          <li class="todo-filter completed">
+            <a href="#">Completed</a>
+          </li>
+        </ul>
+      </footer>
+    </main>
+
+    <footer>
+      <small>Created at <img src="images/bitmaker.png" alt="Bitmaker" class="footer-wordmark" /></small>
+    </footer>
+
+    <!-- Add a script tag that will get our javascript file -->
+    <script src="js/todos.js"></script>
+
+  </body>
+</html>
