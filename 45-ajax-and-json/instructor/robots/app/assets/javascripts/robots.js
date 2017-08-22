@@ -20,15 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
       method: 'GET',
       dataType: 'json'
     }).done(function(data) {
-      var robotDetails = document.querySelector('#robot-details');
-      //robotDetails.innerHTML = data;
+      var robotContainer = document.createElement('div');
 
       var profilePicSrc = "http://robohash.org/" + data.address;
 
       var img = document.createElement('img');
       img.src = profilePicSrc;
 
-      robotDetails.appendChild(img);
+      robotContainer.appendChild(img);
 
       // Show price
       // Goal: <p>Price: <strong>$123.45</strong></p>
@@ -40,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
       pTag.innerHTML = 'Price: ';
       pTag.appendChild(strongTag);
 
-      robotDetails.appendChild(pTag);
+      robotContainer.appendChild(pTag);
+
+      var robotDetails = document.querySelector('#robot-details');
+      robotDetails.innerHTML = robotContainer.innerHTML
     });
   })
 
