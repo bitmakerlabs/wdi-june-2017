@@ -3,25 +3,25 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Step 1: Listen to the click event on each link
-  var robotLinks = document.querySelectorAll('.robot > a');
+  // Step 1: Listen to all click events on the robot container
+  var robotContainer = document.getElementById('robot-container');
+  robotContainer.addEventListener('click', function(event) {
 
-  for(var i = 0; i < robotLinks.length; i++) {
-    robotLinks[i].addEventListener('click', function(event) {
+    // Step 2: Prevent default behaviour of clicking on a link
+    event.preventDefault();
 
-      // Step 2: Prevent default behaviour of clicking on a link
-      event.preventDefault();
+    // Step 3: Figure out the destination URL
+    var anchor = event.target.parentNode;
+    var url = anchor.href;
 
-      // Step 3: Make ajax request
-      var url = this.href;
-      $.ajax({
-        url: url,
-        method: 'GET'
-      }).done(function(data) {
-        var robotDetails = document.querySelector('#robot-details');
-        robotDetails.innerHTML = data;
-      });
+    // Step 4: Make ajax request
+    $.ajax({
+      url: url,
+      method: 'GET'
+    }).done(function(data) {
+      var robotDetails = document.querySelector('#robot-details');
+      robotDetails.innerHTML = data;
     });
-  }
+  })
 
 });
