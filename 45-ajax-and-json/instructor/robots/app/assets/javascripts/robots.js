@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Step 4: Make ajax request
     $.ajax({
       url: url,
-      method: 'GET'
+      method: 'GET',
+      dataType: 'json'
     }).done(function(data) {
       var robotDetails = document.querySelector('#robot-details');
       robotDetails.innerHTML = data;
