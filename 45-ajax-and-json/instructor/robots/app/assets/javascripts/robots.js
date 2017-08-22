@@ -29,6 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
       img.src = profilePicSrc;
 
       robotDetails.appendChild(img);
+
+      // Show price
+      // Goal: <p>Price: <strong>$123.45</strong></p>
+      var priceString = '$' + (data.model_number/100);
+      var strongTag = document.createElement('strong');
+      strongTag.innerHTML = priceString;
+
+      var pTag = document.createElement('p');
+      pTag.innerHTML = 'Price: ';
+      pTag.appendChild(strongTag);
+
+      robotDetails.appendChild(pTag);
     });
   })
 
