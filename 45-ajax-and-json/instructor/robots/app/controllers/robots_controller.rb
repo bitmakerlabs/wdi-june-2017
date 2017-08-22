@@ -12,11 +12,7 @@ class RobotsController < ApplicationController
 
     respond_to do |format|
 
-      format.html do
-        if request.xhr? # XmlHttpRequest
-          render layout: false
-        end
-      end
+      format.html
 
       format.json do
         render json: @robot, except: %i(created_at updated_at)
