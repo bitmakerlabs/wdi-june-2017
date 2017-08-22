@@ -20,29 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
       method: 'GET',
       dataType: 'json'
     }).done(function(data) {
-      var robotContainer = document.createElement('div');
+      // Step 1: Fetch the template
+      var source = document.getElementById('robot-template').innerHTML;
 
-      var profilePicSrc = "http://robohash.org/" + data.address;
+      // Step 2: Compile the template source code
+      var template = Handlebars.compile(source);
 
-      var img = document.createElement('img');
-      img.src = profilePicSrc;
+      // Step 3: Hydrate the template
+      var robotHtml = template(data);
 
-      robotContainer.appendChild(img);
-
-      // Show price
-      // Goal: <p>Price: <strong>$123.45</strong></p>
-      var priceString = '$' + (data.model_number/100);
-      var strongTag = document.createElement('strong');
-      strongTag.innerHTML = priceString;
-
-      var pTag = document.createElement('p');
-      pTag.innerHTML = 'Price: ';
-      pTag.appendChild(strongTag);
-
-      robotContainer.appendChild(pTag);
-
+      // Step 4: Put the HTML into the page
       var robotDetails = document.querySelector('#robot-details');
-      robotDetails.innerHTML = robotContainer.innerHTML
+      robotDetails.innerHTML = robotHtml;
     });
   })
 
